@@ -1,0 +1,26 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px auto;
+
+    .imgContainer {
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+        p{
+            line-height: 1.6;
+            color: black;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import NavigationLayout from "./components/navigation/navigationLayout/navigationLayout";
 
-function App() {
+import Home from "./pages/home/home";
+import Artworks from "./pages/artworks/artworks";
+import Designs from "./pages/designs/designs";
+import Graydes from "./pages/graydes/graydes";
+import About from "./pages/about/about";
+import Contact from "./pages/contact/contact";
+import Category from "./pages/category/category";
+import ProjectInfo from "./components/project-info/project-info";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<NavigationLayout />}>
+        <Route index element={<Home />} />
+        <Route path="artworks" element={<Artworks />} />
+        <Route path="design" element={<Designs />} />
+        <Route path="design/:category" element={<Category/>}/>
+        <Route path="/:projectSlug" element={<ProjectInfo/>}/>
+        <Route path="graydes" element={<Graydes />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

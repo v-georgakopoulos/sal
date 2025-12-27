@@ -1,0 +1,55 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .main-banner, .home-banner {
+        width: 100%;
+        img{
+            width: 100%; 
+            display: block;  
+        }
+    }
+
+    .main-categories {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+          img{
+            width: 100%; 
+            display: block;  
+        }
+    }
+
+    .sub-categories {
+        width: 100%;
+        h3{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+              img{
+                width: 100%; 
+            display: block;    
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+    .logofolio {
+        width: 100%;
+        h3{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        img {
+              width: 100%; 
+            display: block;  
+        }
+    }
+}
