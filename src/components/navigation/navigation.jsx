@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react"; // icon
+import { ChevronDown } from "lucide-react";
 import { NAVIGATION_LINKS } from "../../data/navigation-data";
 import mainLogo from "../../assets/main-logo.png";
 import faviconLogo from "../../assets/favicon-Sal.png";
-
 
 import "./navigation.scss";
 
@@ -13,7 +12,7 @@ const Navigation = () => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(prev => !prev);
+    setMenuOpen((prev) => !prev);
     setSubmenuOpen(false);
   };
 
@@ -31,7 +30,10 @@ const Navigation = () => {
 
       {/* Hamburger */}
       <div className="mobile-nav">
-        <div className={`menu-icon ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <div
+          className={`menu-icon ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
           <div className="bar1"></div>
           <div className="bar2"></div>
           <div className="bar3"></div>
@@ -40,19 +42,21 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        {NAVIGATION_LINKS.map(link => {
+        {NAVIGATION_LINKS.map((link) => {
           const hasSubmenu = !!link.subcategories;
 
           return (
             <li
               key={link.id}
-              className={`menu-item ${hasSubmenu ? "has-submenu" : ""} ${submenuOpen && hasSubmenu ? "open" : ""}`}
+              className={`menu-item ${hasSubmenu ? "has-submenu" : ""} ${
+                submenuOpen && hasSubmenu ? "open" : ""
+              }`}
             >
               <div
                 className="menu-link-wrapper"
                 onClick={() => {
                   if (hasSubmenu) {
-                    setSubmenuOpen(prev => !prev);
+                    setSubmenuOpen((prev) => !prev);
                   } else {
                     closeAll();
                   }
@@ -69,7 +73,7 @@ const Navigation = () => {
 
               {hasSubmenu && submenuOpen && (
                 <ul className="submenu">
-                  {link.subcategories.map(sub => (
+                  {link.subcategories.map((sub) => (
                     <li key={sub.id}>
                       <Link to={sub.path} onClick={closeAll}>
                         {sub.name}

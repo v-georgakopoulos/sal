@@ -10,9 +10,9 @@ const Footer = () => {
             <div className="footer-logo">
                 <img src={faviconSal} alt={"Sal athens logo"} />    
             <div className="social-links">
-                <Link>INSTAGRAM</Link>
-                <Link>BEHANCE</Link>
-                <Link>LINKEDIN</Link>
+                <Link to={`https://www.instagram.com/sal_athens`} target="_blank">INSTAGRAM</Link>
+                <Link to={`https://www.behance.net/Sal_athens`} target="_blank">BEHANCE</Link>
+                <Link to={`https://www.linkedin.com/in/sal-athens`} target="_blank">LINKEDIN</Link>
             </div>
             </div>
             <p>©Sal Athens {new Date().getFullYear()} VAT EL 132657068</p>

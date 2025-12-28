@@ -17,6 +17,24 @@
         margin-right: auto;
         margin-bottom: 10px;
     }
+
+    .info-details {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 10px;
+
+      p{
+        color: black;
+        font-weight: 500;
+
+        span {
+          color: gray;
+          font-weight: 400;
+        }
+      }
+    }
+
     .descriptions {
       display: flex;
       flex-direction: column;
@@ -24,6 +42,7 @@
     
         p{
             line-height: 1.6;
+            font-weight: 500;
         }
     }
   }

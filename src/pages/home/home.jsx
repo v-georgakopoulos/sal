@@ -5,54 +5,73 @@ import subBanner from "../../assets/home-banner-two.jpg";
 import logofolio from "../../assets/logofolio-footer.jpg";
 import "./home.scss";
 import Footer from "../../components/footer/footer";
+import LatestProject from "../../components/latest-project/latest-project";
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="main-banner">
+    <main className="home-container">
+      <section className="main-banner">
         <Link to="/about">
           <img src={mainBanner} alt="Sal Athens" />
         </Link>
-      </div>
+      </section>
 
-      <div className="main-categories">
-        {MAIN_CATEGORIES.map((cat) => (
-          <Link key={cat.id} to={cat.path}>
-            <img src={cat.image} alt={cat.name} />
-          </Link>
-        ))}
-      </div>
+      <section className="main-categories">
+        <div className="main-grid">
+          {MAIN_CATEGORIES.map((cat) => (
+            <div className="main-category">
+              <Link key={cat.id} to={cat.path}>
+                <img src={cat.image} alt={cat.name} />
+              </Link>
+              <div className="overlay">
+                <img
+                  src={cat.logo}
+                  alt={`${cat.name} logo`}
+                  className="logo-overlay"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <div className="sub-categories">
+      <section className="sub-categories">
         <h3>Sal Athens Services</h3>
         <div className="sub-grid">
           {SUBCATEGORIES.map((sub) => (
-            <div key={sub.id}>
-              <Link to={`/design/${sub.path}`}>
-                <img src={sub.image} alt={sub.name} />
-              </Link>
+            <div className="sub-category">
+              <div className="sub-image" key={sub.id}>
+                <Link to={`/design/${sub.path}`}>
+                  <img src={sub.image} alt={sub.name} />
+                </Link>
+              </div>
               <p>{sub.name}</p>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="home-banner">
+      <section>
+        <LatestProject />
+      </section>
+
+      <section className="home-banner">
         <img src={subBanner} alt="Sal Athens" />
-      </div>
+      </section>
 
-      <div className="logofolio">
-        <h3>Download Sal Athens Magazine {new Date().getFullYear()}</h3>
+      <section className="logofolio">
         <a href="/logofolio.pdf" download>
+          <h3>Download Logofolio {new Date().getFullYear()}</h3>
           <img
             src={logofolio}
             alt="Sal Athens Magazine"
             style={{ cursor: "pointer" }}
           />
         </a>
-      </div>
+      </section>
+
       <Footer />
-    </div>
+    </main>
   );
 };
 

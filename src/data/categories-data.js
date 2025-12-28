@@ -6,10 +6,14 @@ import illustration from "../assets/illustration.jpg";
 import interiorDesign from "../assets/interior-design.jpg";
 import packaging from "../assets/packaging.jpg";
 
+import artworksLogo from "../assets/artworks-logo.svg"
+import designsLogo from "../assets/designs-logo.svg"
+import graydesLogo from "../assets/graydes-logo.svg"
+
 export const MAIN_CATEGORIES = [
-  { id: 1, name: "Artworks", image: artworks, path: "/artworks" },
-  { id: 2, name: "Designs", image: designs, path: "/design" },
-  { id: 3, name: "Graydes", image: graydes, path: "/graydes" },
+  { id: 1, name: "Artworks", image: artworks,logo:artworksLogo, path: "/artworks" },
+  { id: 2, name: "Designs", image: designs, logo:designsLogo, path: "/design" },
+  { id: 3, name: "Graydes", image: graydes, logo:graydesLogo, path: "/graydes" },
 ];
 
 export const SUBCATEGORIES = [
