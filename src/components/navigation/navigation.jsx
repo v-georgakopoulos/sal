@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
 import { NAVIGATION_LINKS } from "../../data/navigation-data";
 import mainLogo from "../../assets/main-logo.png";
 import faviconLogo from "../../assets/favicon-Sal.png";
@@ -9,21 +8,13 @@ import "./navigation.scss";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [submenuOpen, setSubmenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-    setSubmenuOpen(false);
-  };
-
-  const closeAll = () => {
-    setMenuOpen(false);
-    setSubmenuOpen(false);
-  };
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="navigation-wrapper" onMouseLeave={closeAll}>
-      <Link className="logo-link" to="/" onClick={closeAll}>
+    <div className="navigation-wrapper" onMouseLeave={closeMenu}>
+      <Link className="logo-link" to="/" onClick={closeMenu}>
         <img src={mainLogo} alt="Sal Athens" />
       </Link>
 
@@ -38,7 +29,6 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         {NAVIGATION_LINKS.map((link) => {
           const hasSubmenu = !!link.subcategories;
@@ -46,34 +36,17 @@ const Navigation = () => {
           return (
             <li
               key={link.id}
-              className={`menu-item ${hasSubmenu ? "has-submenu" : ""} ${
-                submenuOpen && hasSubmenu ? "open" : ""
-              }`}
+              className={`menu-item ${hasSubmenu ? "has-submenu" : ""}`}
             >
-              <div
-                className="menu-link-wrapper"
-                onClick={() => {
-                  if (hasSubmenu) {
-                    setSubmenuOpen((prev) => !prev);
-                  } else {
-                    closeAll();
-                  }
-                }}
-              >
-                <Link to={link.path}>{link.name}</Link>
-                {hasSubmenu && (
-                  <ChevronDown
-                    size={16}
-                    className={`submenu-icon ${submenuOpen ? "open" : ""}`}
-                  />
-                )}
-              </div>
+              <Link to={link.path} className="menu-link">
+                {link.name}
+              </Link>
 
-              {hasSubmenu && submenuOpen && (
+              {hasSubmenu && (
                 <ul className="submenu">
                   {link.subcategories.map((sub) => (
-                    <li key={sub.id}>
-                      <Link to={sub.path} onClick={closeAll}>
+                    <li>
+                      <Link to={sub.path} onClick={closeMenu}>
                         {sub.name}
                       </Link>
                     </li>
@@ -85,7 +58,6 @@ const Navigation = () => {
         })}
       </ul>
 
-      {/* Favicon */}
       <div className="favicon-logo">
         <img src={faviconLogo} alt="Sal Athens" />
       </div>
