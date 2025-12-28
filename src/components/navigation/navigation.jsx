@@ -31,12 +31,12 @@ const Navigation = () => {
 
       <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         {NAVIGATION_LINKS.map((link) => {
-          const hasSubmenu = !!link.subcategories;
+          const hasSubmenu = Boolean(link.subcategories);
 
           return (
             <li
               key={link.id}
-              className={`menu-item ${hasSubmenu ? "has-submenu" : ""}`}
+              className={`menu-item ${hasSubmenu ? "submenu" : ""}`}
             >
               <Link to={link.path} className="menu-link">
                 {link.name}

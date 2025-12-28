@@ -31,7 +31,7 @@
 
   display: flex;
   align-items: center;
-  padding-left: 16px;
+  padding-left: 20px;
 
   transform: translateY(100%);
   transition: transform 1s ease;
@@ -40,7 +40,7 @@
 
 .project-name {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .project-card:hover {

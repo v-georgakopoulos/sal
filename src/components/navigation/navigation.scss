@@ -70,10 +70,8 @@
   transform: translateY(-10px);
   pointer-events: none;
 
-  transition:
-    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-
 
   a {
     color: black;
@@ -95,37 +93,30 @@
   .menu-item {
     margin-bottom: 18px;
 
-    .menu-link-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
+    a.menu-link {
+      font-size: 17px;
+      font-weight: 500;
+      color: black;
+      transition: color 1s ease;
 
-      a.menu-link {
-        font-size: 17px;
-        font-weight: 500;
-        color: black;
-        transition: color 1s ease;
-
-        &:hover {
-          color: gray;
-        }
+      &:hover {
+        color: gray;
       }
     }
 
     .submenu {
-    position: absolute; 
-    top: 40px;
-    left: 0;
-    width: 100%; 
-    background-color: white;
-    place-items: center;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    padding: 10px 0;
-    margin: auto;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      place-items: center;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity 1s ease, transform 1s ease;
+      padding: 10px 0;
+      margin: auto;
 
       li {
         list-style: none;
@@ -139,16 +130,15 @@
           padding: 10px 20px;
           display: block;
           transition: color 1s ease;
-  
+
           &:hover {
             color: gray;
           }
         }
       }
-
     }
 
-    &:hover>.submenu {
+    &:hover > .submenu {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
