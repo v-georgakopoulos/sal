@@ -38,4 +38,19 @@
       }
     }
   }
+
+  .next-project {
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    
+    button {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      font-family: "Roboto";
+      cursor: pointer;
+    }
+  }
 }

@@ -13,6 +13,7 @@ const Category = () => {
 
   return (
     <div className="category-container">
+      <div className="grid-category">
       {filteredProjects.map(project => (
         <Link
           key={project.slug}
@@ -21,6 +22,7 @@ const Category = () => {
           <ProjectCard project={project} />
         </Link>
       ))}
+      </div>
     </div>
   );
 };
