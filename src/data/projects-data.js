@@ -19,7 +19,7 @@ export const PROJECTS = [
       "The final result is a confident and modern brand identity that reflects MSA’s expertise and long standing experience in the maritime industry. The system was designed to work seamlessly across digital, print and large scale applications, positioning the company as a credible and premium presence in today’s international market. "
     ],
     images: [msaCover,msa1, msa2, msa3,msa4,msa5],
-    categories: ["design"],
-    subcategories: ["logo-design","interior-design"],
+    category: ["design"],
+    subcategory: ["logo-design","interior-design"],
   },
 ];

@@ -8,7 +8,7 @@ const Category = () => {
   const { category } = useParams();
 
   const filteredProjects = PROJECTS.filter(project =>
-    project.subcategories.includes(category)
+    project.subcategory.includes(category)
   );
 
   return (

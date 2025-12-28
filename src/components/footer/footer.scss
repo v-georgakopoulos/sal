@@ -6,17 +6,18 @@ footer {
     .footer-logo {
         width: 400px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         img {
             width: 40px;
-            margin-left: 18px;
+            margin-left: 20px;
         }
     }
 
     .social-links {
+        width: 100%;
         height: 40px;
-        width: 400px;
         display: flex;
         align-items: center;
         justify-content: space-between;

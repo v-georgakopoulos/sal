@@ -9,11 +9,11 @@ const Footer = () => {
         <footer>
             <div className="footer-logo">
                 <img src={faviconSal} alt={"Sal athens logo"} />    
-            </div>
             <div className="social-links">
                 <Link>INSTAGRAM</Link>
                 <Link>BEHANCE</Link>
                 <Link>LINKEDIN</Link>
+            </div>
             </div>
             <p>©Sal Athens {new Date().getFullYear()} VAT EL 132657068</p>
             <img className="footer-banner" src={footerBanner} alt="Footer Banner" />
