@@ -1,9 +1,9 @@
-import aboutSal from "../../assets/aboutSal.jpg"
+import aboutBanner from "../../assets/about-banner.jpg"
 import "./about.scss"
 const About = () => {
   return (
     <div className="about-container">
-      <div className="info">
+      <div className="about-info">
         <p>
           Hi, I’m Kyrillos Partsalis, but my friends call me Sal. I’m a visual
           artist and brand creator based in Athens, working somewhere between
@@ -19,8 +19,8 @@ const About = () => {
           ion, and the need to create with purpose.
         </p>
       </div>
-      <div className="imgContainer">
-        <img src={aboutSal} alt="Sal Athens" />
+      <div className="about-img">
+        <img src={aboutBanner} alt="Sal Athens" />
       </div>
     </div>
   );

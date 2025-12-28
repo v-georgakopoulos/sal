@@ -43,7 +43,13 @@ const Home = () => {
 
       <div className="logofolio">
         <h3>Download Sal Athens Magazine {new Date().getFullYear()}</h3>
-        <img src={logofolio} alt="Sal Athens Magazine" />
+        <a href="/logofolio.pdf" download>
+          <img
+            src={logofolio}
+            alt="Sal Athens Magazine"
+            style={{ cursor: "pointer" }}
+          />
+        </a>
       </div>
       <Footer />
     </div>
