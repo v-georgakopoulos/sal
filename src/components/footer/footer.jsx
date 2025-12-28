@@ -15,7 +15,7 @@ const Footer = () => {
                 <Link to={`https://www.linkedin.com/in/sal-athens`} target="_blank">LINKEDIN</Link>
             </div>
             </div>
-            <p>©Sal Athens {new Date().getFullYear()} VAT EL 132657068</p>
+            <p>© Sal Athens {new Date().getFullYear()} VAT EL 132657068</p>
             <img className="footer-banner" src={footerBanner} alt="Footer Banner" />
         </footer>
     )

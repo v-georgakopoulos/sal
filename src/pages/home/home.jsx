@@ -1,19 +1,20 @@
 import { Link } from "react-router-dom";
 import { MAIN_CATEGORIES, SUBCATEGORIES } from "../../data/categories-data";
-import mainBanner from "../../assets/home-banner-one.jpg";
-import subBanner from "../../assets/home-banner-two.jpg";
-import logofolio from "../../assets/logofolio-footer.jpg";
-import "./home.scss";
-import Footer from "../../components/footer/footer";
 import LatestProject from "../../components/latest-project/latest-project";
+import Footer from "../../components/footer/footer";
+import HeroSlider from "../../components/hero-slider/hero-slider";
+import subBanner from "../../assets/home-banner-two.jpg";
+import logoRewards from "../../assets/logo-rewards.svg"
+import logofolio from "../../assets/logofolio-footer.jpg";
+
+
+import "./home.scss";
 
 const Home = () => {
   return (
     <main className="home-container">
       <section className="main-banner">
-        <Link to="/about">
-          <img src={mainBanner} alt="Sal Athens" />
-        </Link>
+        <HeroSlider/>
       </section>
 
       <section className="main-categories">
@@ -36,16 +37,16 @@ const Home = () => {
       </section>
 
       <section className="sub-categories">
-        <h3>Sal Athens Services</h3>
+        <h1>Creative Fields</h1>
         <div className="sub-grid">
           {SUBCATEGORIES.map((sub) => (
             <div className="sub-category">
-              <div className="sub-image" key={sub.id}>
-                <Link to={`/design/${sub.path}`}>
+                <Link key={sub.id} to={`/design/${sub.path}`}>
                   <img src={sub.image} alt={sub.name} />
                 </Link>
+              <div className="sub-overlay">
+                <p className="sub-name">{sub.name.toUpperCase()}</p>
               </div>
-              <p>{sub.name}</p>
             </div>
           ))}
         </div>
@@ -57,6 +58,14 @@ const Home = () => {
 
       <section className="home-banner">
         <img src={subBanner} alt="Sal Athens" />
+      </section>
+
+      <section>
+        <div className="rewards-container">
+          <img src={logoRewards} alt="Rewards" />
+          <img src={logoRewards} alt="Rewards" />
+          <img src={logoRewards} alt="Rewards" />
+        </div>
       </section>
 
       <section className="logofolio">

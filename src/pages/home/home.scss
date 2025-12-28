@@ -39,8 +39,8 @@
         align-items: center;
 
         opacity: 0;
-        transition: opacity 1s ease;
         pointer-events: none;
+        transition: opacity 1s ease;
 
         .logo-overlay {
           max-width: 45%;
@@ -65,16 +65,28 @@
           }
         }
       }
+
+      &:nth-child(1) .overlay-category {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      &:nth-child(2) .overlay-category {
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      &:nth-child(3) .overlay-category {
+        background: rgba(0, 0, 0, 0.4);
+      }
     }
   }
 
   .sub-categories {
     width: 100%;
 
-    h3 {
+    h1 {
       text-align: center;
-      font-size: 40px;
-      font-weight: 700;
+      font-size: 50px;
+      font-weight: 100;
       margin-bottom: 20px;
     }
 
@@ -83,26 +95,62 @@
       grid-template-columns: repeat(4, 1fr);
 
       .sub-category {
-        .sub-image {
-          overflow: hidden;
+        position: relative;
+        overflow: hidden;
 
-          img {
-            width: 100%;
-            display: block;
-            transition: transform 1s ease;
+        img {
+          width: 100%;
+          display: block;
+          transition: transform 1s ease;
+        }
 
-            &:hover {
-              transform: scale(1.1);
-            }
+        .sub-overlay {
+          position: absolute;
+          inset: 0;
+          background-color: rgba(0, 0, 0, 0.6);
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 1s ease;
+
+          .sub-name {
+            font-size: 40px;
+            font-weight: 100;
+            color: white;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 1s ease, transform 1s ease;
           }
         }
 
-        p {
-          text-align: center;
-          margin-top: 4px;
-          color: black;
+        &:hover {
+          img {
+            transform: scale(1.05);
+          }
+
+          .sub-overlay {
+            opacity: 1;
+
+            .sub-name {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
         }
       }
+    }
+  }
+
+  .rewards-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    img{
+      width: 150px;
     }
   }
 
@@ -113,6 +161,7 @@
       color: black;
       text-align: center;
       font-size: 30px;
+      font-weight: 100;
       margin-bottom: 20px;
     }
 
