@@ -23,7 +23,6 @@
   }
 }
 
-/* HAMBURGER */
 .menu-icon {
   width: 28px;
   height: 18px;
@@ -42,7 +41,7 @@
 
   &.open {
     .bar1 {
-      transform: rotate(45deg) translate(6px, 6px);
+      transform: rotate(45deg) translate(4px, 4px);
     }
 
     .bar2 {
@@ -55,21 +54,29 @@
   }
 }
 
-/* MOBILE MENU */
 .mobile-menu {
   position: absolute;
   top: 60px;
   left: 0;
-  width: 300px;
-  background: #fff;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
   list-style: none;
   padding: 20px;
-  display: none;
-  animation: slideNav 0.6s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.open {
-    display: block;
- 
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .menu-item {
@@ -78,15 +85,14 @@
     .menu-link-wrapper {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 6px;
       cursor: pointer;
 
       a {
-        font-size: 15px;
+        font-size: 17px;
+        font-weight: 500;
         color: black;
-        text-decoration: none;
-        transition: color 0.5s;
+        transition: color 0.8s ease;
 
         &:hover {
           color: gray;
@@ -94,7 +100,7 @@
       }
 
       .submenu-icon {
-        transition: transform 0.3s ease;
+        transition: transform 0.8s ease;
       }
 
       .submenu-icon.open {
@@ -103,6 +109,7 @@
     }
   }
 }
+
 
 /* SUBMENU */
 .has-submenu > .submenu {
@@ -120,24 +127,13 @@
   margin-bottom: 10px;
 
   a {
-    font-size: 15px;
+    font-size: 17px;
     color: black;
-    text-decoration: none;
+    font-weight: 500;
     transition: color 0.5s;
 
     &:hover {
       color: gray;
     }
-  }
-}
-
-@keyframes slideNav {
-  from {
-    opacity:0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }

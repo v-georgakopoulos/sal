@@ -1,46 +1,47 @@
 export const NAVIGATION_LINKS = [
-  {
+   {
     id: 1,
+    name: "About",
+    path: "/about"
+  },
+  {
+    id: 2,
     name: "Artworks",
     path: "/artworks"
   },
   {
-    id: 2,
+    id: 3,
     name: "Designs",
     path: "/design",
     subcategories: [
       {
-        id: 21,
+        id: 31,
         name: "Logo Design",
         path: "design/logo-design"
       },
       {
-        id: 22,
+        id: 32,
         name: "Illustration",
         path: "design/illustration"
       },
       {
-        id: 23,
+        id: 33,
         name: "Interior Design",
         path: "design/interior-design"
       },
       {
-        id: 24,
+        id: 34,
         name: "Packaging",
         path: "design/packaging"
       }
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Graydes",
     path: "/graydes"
   },
-  {
-    id: 4,
-    name: "About",
-    path: "/about"
-  },
+ 
   {
     id: 5,
     name: "Contact",

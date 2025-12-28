@@ -58,7 +58,6 @@ const ProjectInfo = () => {
           <button
             onClick={() => {
               navigate(`/${nextProject.slug}`);
-              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
             Next Project →

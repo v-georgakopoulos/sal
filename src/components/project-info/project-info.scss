@@ -26,10 +26,9 @@
 
       p{
         color: black;
-        font-weight: 500;
+        font-weight: bold;
 
         span {
-          color: gray;
           font-weight: 400;
         }
       }
@@ -38,11 +37,11 @@
     .descriptions {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
     
         p{
             line-height: 1.6;
-            font-weight: 500;
+            font-weight: bold;
         }
     }
   }

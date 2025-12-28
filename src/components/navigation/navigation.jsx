@@ -22,13 +22,11 @@ const Navigation = () => {
   };
 
   return (
-    <div className="navigation-wrapper">
-      {/* Centered Logo */}
+    <div className="navigation-wrapper" onMouseLeave={closeAll}>
       <Link className="logo-link" to="/" onClick={closeAll}>
         <img src={mainLogo} alt="Sal Athens" />
       </Link>
 
-      {/* Hamburger */}
       <div className="mobile-nav">
         <div
           className={`menu-icon ${menuOpen ? "open" : ""}`}

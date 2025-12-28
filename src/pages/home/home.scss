@@ -20,53 +20,52 @@
     }
 
     .main-category {
-  position: relative;
-  overflow: hidden;
+      position: relative;
+      overflow: hidden;
 
-  img {
-    width: 100%;
-    display: block;
-    transition: transform 1s ease;
-  }
+      img {
+        width: 100%;
+        display: block;
+        transition: transform 1s ease;
+      }
 
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+      .overlay-category {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    opacity: 0;
-    transition: opacity 1s ease;
-    pointer-events: none;
+        opacity: 0;
+        transition: opacity 1s ease;
+        pointer-events: none;
 
-    .logo-overlay {
-      max-width: 45%;
-      max-height: 45%;
-      opacity: 0;
-      transform: scale(0.95);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-  }
+        .logo-overlay {
+          max-width: 45%;
+          max-height: 45%;
+          opacity: 0;
+          transform: scale(0.95);
+          transition: opacity 1s ease, transform 1s ease;
+        }
+      }
 
-  &:hover {
-    img {
-      transform: scale(1.05);
-    }
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
 
-    .overlay {
-      opacity: 1;
+        .overlay-category {
+          opacity: 1;
 
-      .logo-overlay {
-        opacity: 1;
-        transform: scale(1);
+          .logo-overlay {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
       }
     }
-  }
-}
-
   }
 
   .sub-categories {

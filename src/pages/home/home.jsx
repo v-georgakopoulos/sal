@@ -23,7 +23,7 @@ const Home = () => {
               <Link key={cat.id} to={cat.path}>
                 <img src={cat.image} alt={cat.name} />
               </Link>
-              <div className="overlay">
+              <div className="overlay-category">
                 <img
                   src={cat.logo}
                   alt={`${cat.name} logo`}
