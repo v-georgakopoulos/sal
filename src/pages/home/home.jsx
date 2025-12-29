@@ -20,8 +20,8 @@ const Home = () => {
       <section className="main-categories">
         <div className="main-grid">
           {MAIN_CATEGORIES.map((cat) => (
-            <div className="main-category">
-              <Link key={cat.id} to={cat.path}>
+            <div key={cat.id} className="main-category">
+              <Link  to={cat.path}>
                 <img src={cat.image} alt={cat.name} />
               </Link>
               <div className="overlay-category">
@@ -40,8 +40,8 @@ const Home = () => {
         <h1>Creative Fields</h1>
         <div className="sub-grid">
           {SUBCATEGORIES.map((sub) => (
-            <div className="sub-category">
-                <Link key={sub.id} to={`/design/${sub.path}`}>
+            <div key={sub.id}  className="sub-category">
+                <Link to={`/design/${sub.path}`}>
                   <img src={sub.image} alt={sub.name} />
                 </Link>
               <div className="sub-overlay">

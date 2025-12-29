@@ -17,8 +17,9 @@ const HeroSlider = () => {
       navigation
       pagination={{ clickable: true }}
       loop={true}
-      autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 3000 }}
       slidesPerView={1}
+      speed={1000}
     >
       {SLIDES.map((slide) => (
         <SwiperSlide key={slide.id}>

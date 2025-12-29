@@ -1,9 +1,13 @@
-import msaCover from "../assets/project-images/msa-cover.jpg"
-import msa1 from "../assets/project-images/msa1.jpg"
-import msa2 from "../assets/project-images/msa2.jpg"
-import msa3 from "../assets/project-images/msa3.jpg"
-import msa4 from "../assets/project-images/msa5.jpg"
-import msa5 from "../assets/project-images/msa6.jpg"
+import msaCover from "../assets/project-images/desings/msa/msa-cover.jpg"
+import msa1 from "../assets/project-images/desings/msa/msa1.jpg"
+import msa2 from "../assets/project-images/desings/msa/msa2.jpg"
+import msa3 from "../assets/project-images/desings/msa/msa3.jpg"
+import msa4 from "../assets/project-images/desings/msa/msa5.jpg"
+import msa5 from "../assets/project-images/desings/msa/msa6.jpg"
+
+
+import pinkCover from "../assets/project-images/artworks/pink/pinkCover.jpg"
+
 
 
 
@@ -57,3 +61,16 @@ export const PROJECTS = [
     subcategory: ["logo-design","interior-design"],
   },
 ];
+
+
+export const ARTWORKS = [
+  {
+    id:1,
+    createdAt: Date.now(),
+    name:"pink",
+    slug:"pink",
+    images:[pinkCover],
+    description:"",
+    category:"artworks"
+  }
+]

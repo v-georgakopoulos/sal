@@ -1,10 +1,18 @@
+import { ARTWORKS } from "../../data/projects-data";
+import ArtworksCard from "../../components/artwork-card/artwork-card";
+
+import "./artworks.scss"
 
 const Artworks = () => {
-    return (
-        <div>
-Artworks
-        </div>
-    )
-}
+  return (
+    <div className="artworks-container">
+      <div className="artworks-grid">
+        {ARTWORKS.map((artwork) => (
+          <ArtworksCard key={artwork.id} artwork={artwork} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Artworks
+export default Artworks;

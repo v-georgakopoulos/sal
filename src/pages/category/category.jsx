@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { PROJECTS } from "../../data/projects-data";
 import ProjectCard from "../../components/project-card/project-card";
 
@@ -14,14 +14,7 @@ const Category = () => {
   return (
     <div className="category-container">
       <div className="grid-category">
-      {filteredProjects.map(project => (
-        <Link
-          key={project.slug}
-          to={`/design/${category}`}
-        >
-          <ProjectCard project={project} />
-        </Link>
-      ))}
+        {filteredProjects.map(project => <ProjectCard key={project.id} project={project} />)}
       </div>
     </div>
   );

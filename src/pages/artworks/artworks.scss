@@ -1,0 +1,11 @@
+.artworks-container {
+    width: calc(100% - 20px);
+    margin: 20px auto;
+
+    .artworks-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        gap: 10px;
+    }
+}

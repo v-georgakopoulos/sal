@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Navigate } from "react-router-dom";
 import { PROJECTS } from "../../data/projects-data";
 import "./project-info.scss";
 
@@ -8,7 +8,9 @@ const ProjectInfo = () => {
 
   const currentProject = PROJECTS.find((p) => p.slug === projectSlug);
 
-  if (!currentProject) return <p>Project not found</p>;
+  if(!currentProject) {
+    return <Navigate to="/404" replace/>
+  }
 
   const currentIndex = PROJECTS.findIndex((p) => p.slug === projectSlug);
 
