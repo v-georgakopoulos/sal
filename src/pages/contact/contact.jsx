@@ -1,9 +1,8 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-import contactBanner from "../../assets/contact-banner.jpg"
-
-import "./contact.scss"
+import contactBanner from "../../assets/contact-banner.jpg";
+import "./contact.scss";
 
 const defaultFormFields = {
   fullname: "",
@@ -25,6 +24,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
     setLoading(true);
     setSuccess(false);
     setError(false);
@@ -34,9 +34,7 @@ const Contact = () => {
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
-        {
-          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-        }
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -45,25 +43,22 @@ const Contact = () => {
           setLoading(false);
           setFormFields(defaultFormFields);
 
-          setTimeout(() => {
-            setSuccess(false);
-          }, 2000);
+          setTimeout(() => setSuccess(false), 3000);
         },
         (error) => {
-          console.log(error);
+          console.log(error)
           setError(true);
           setSuccess(false);
           setLoading(false);
 
-          setTimeout(() => {
-            setError(false);
-          }, 2000);
+          setTimeout(() => setError(false), 3000);
         }
       );
   };
 
+
+
   const onChangeHandler = (e) => {
-    console.log(formFields);
     const { name, value } = e.target;
     setFormFields({ ...formFields, [name]: value });
   };
@@ -77,77 +72,78 @@ const Contact = () => {
         <div className="contact-details">
           <h1>LET’S STAY CONNECTED</h1>
           <h3>DESIGN STUDIO</h3>
-          <strong>24 Megalou Vasileiou Str Nea Smyrni 17122 Athens Greece +30 211 0041015  +30 6942536106</strong>
+          <p>
+            24 Megalou Vasileiou Str Nea Smyrni 17122 Athens Greece
+          </p>
+          <p> +30 211 0041015 +30 6942536106</p>
           <h1 className="map-directions">37.9438°N23.7155°E</h1>
         </div>
+
         <div className="contact-form">
-        <form ref={form} onSubmit={sendEmail}>
-        <input
-          type="text"
-          placeholder="Name*"
-          name="fullname"
-          value={fullname}
-          onChange={onChangeHandler}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email*"
-          name="email"
-          value={email}
-          onChange={onChangeHandler}
-          required
-        />
-        <input
-          type="tel"
-          placeholder="Phone"
-          name="phone"
-          value={phone}
-          onChange={onChangeHandler}
-        />
-        <textarea
-          placeholder="Message*"
-          name="message"
-          value={message}
-          onChange={onChangeHandler}
-          required
-        ></textarea>
-        <div className="terms-container">
+          <form ref={form} onSubmit={sendEmail}>
             <input
-              type="checkbox"
-              name="terms"
-              checked={termsAccepted}
-              onChange={(e) => setTermsAccepted(e.target.checked)}
-              className="terms"
+              type="text"
+              placeholder="Name*"
+              name="fullname"
+              value={fullname}
+              onChange={onChangeHandler}
               required
             />
-            <span>
-              I accept the{" "}
-              <a
-                href="/terms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                terms & conditions
-              </a>
-               {" "}regarding intellectual property rights.
-            </span>
-        </div>
-        <button type="submit" disabled={loading} className="form-button">
-          {loading ? "Sending..." : "Send"}
-        </button>
-        {success && (
-          <p className="success-message">Message sent successfully!</p>
-        )}
-        {error && (
-          <p className="error-message">
-            Failed to send message. Please try again!
-          </p>
-        )}
-      </form>
+            <input
+              type="email"
+              placeholder="Email*"
+              name="email"
+              value={email}
+              onChange={onChangeHandler}
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Phone"
+              name="phone"
+              value={phone}
+              onChange={onChangeHandler}
+            />
+            <textarea
+              placeholder="Message*"
+              name="message"
+              value={message}
+              onChange={onChangeHandler}
+              required
+            ></textarea>
+
+            <div className="terms-container">
+              <input
+                type="checkbox"
+                name="terms"
+                checked={termsAccepted}
+                onChange={(e) => setTermsAccepted(e.target.checked)}
+                className="terms"
+              />
+              <span>
+                I accept the{" "}
+                <a href="/terms" target="_blank" rel="noopener noreferrer">
+                  terms & conditions
+                </a>{" "}
+                regarding intellectual property rights.
+              </span>
+            </div>
+
+            <button type="submit" disabled={loading} className="form-button">
+              {loading ? "Sending..." : "Send"}
+            </button>
+
+            {success && (
+              <p className="success-message">Message sent successfully!</p>
+            )}
+            {error && (
+              <p className="error-message">
+                Failed to send message. Please try again!
+              </p>
+            )}
+          </form>
         </div>
       </div>
-      
     </div>
   );
 };

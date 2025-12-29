@@ -32,6 +32,11 @@
             }
             h3{
                 font-size: 30px;
+                font-weight: 400;
+            }
+            p{
+                text-align: center;
+                width: 100%;
             }
             .map-directions {
                 font-size: 40px;
@@ -40,7 +45,7 @@
         }
 
         .contact-form {
-            padding-top: 80px;
+            padding-top: 40px;
             form {
                 width: 600px;
                 display: flex;
