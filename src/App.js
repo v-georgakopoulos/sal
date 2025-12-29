@@ -13,6 +13,7 @@ import About from "./pages/about/about";
 import Contact from "./pages/contact/contact";
 import Category from "./pages/category/category";
 import NotFound from "./pages/not-found/not-found";
+import Terms from "./pages/terms-policy/terms";
 
 
 
@@ -36,6 +37,9 @@ const location = useLocation()
 
         <Route path="404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
+
+        <Route path="terms" element={<Terms/>}/>
+
       </Route>
     </Routes>
     </AnimatePresence>
