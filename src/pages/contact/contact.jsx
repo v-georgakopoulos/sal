@@ -1,21 +1,24 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import contactBanner from "../../assets/contact-banner.jpg"
+
 import "./contact.scss"
 
 const defaultFormFields = {
   fullname: "",
   email: "",
-  telephone: "",
+  phone: "",
   message: "",
 };
 
 const Contact = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { fullname, email, telephone, message } = formFields;
+  const { fullname, email, phone, message } = formFields;
 
   const form = useRef();
 
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -28,11 +31,11 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        // process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        // process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
         {
-          // publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         }
       )
       .then(
@@ -67,11 +70,21 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <h2>Contact</h2>
-      <form ref={form} onSubmit={sendEmail}>
+      <div className="contact-image">
+        <img src={contactBanner} alt="Brand Creator" />
+      </div>
+      <div className="contact-info">
+        <div className="contact-details">
+          <h1>LET’S STAY CONNECTED</h1>
+          <h3>DESIGN STUDIO</h3>
+          <strong>24 Megalou Vasileiou Str Nea Smyrni 17122 Athens Greece +30 211 0041015  +30 6942536106</strong>
+          <h1 className="map-directions">37.9438°N23.7155°E</h1>
+        </div>
+        <div className="contact-form">
+        <form ref={form} onSubmit={sendEmail}>
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Name*"
           name="fullname"
           value={fullname}
           onChange={onChangeHandler}
@@ -79,28 +92,49 @@ const Contact = () => {
         />
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Email*"
           name="email"
           value={email}
           onChange={onChangeHandler}
           required
         />
         <input
-          type="telephone"
-          placeholder="Telephone"
-          name="telephone"
-          value={telephone}
+          type="tel"
+          placeholder="Phone"
+          name="phone"
+          value={phone}
           onChange={onChangeHandler}
-          required
         />
         <textarea
-          placeholder="Message"
+          placeholder="Message*"
           name="message"
           value={message}
           onChange={onChangeHandler}
+          required
         ></textarea>
-        <button type="submit" disabled={loading}>
-          {loading ? "Sending..." : "Apply"}
+        <div className="terms-container">
+            <input
+              type="checkbox"
+              name="terms"
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}
+              className="terms"
+              required
+            />
+            <span>
+              I accept the{" "}
+              <a
+                href="/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                terms & conditions
+              </a>
+               {" "}regarding intellectual property rights.
+            </span>
+        </div>
+        <button type="submit" disabled={loading} className="form-button">
+          {loading ? "Sending..." : "Send"}
         </button>
         {success && (
           <p className="success-message">Message sent successfully!</p>
@@ -111,6 +145,9 @@ const Contact = () => {
           </p>
         )}
       </form>
+        </div>
+      </div>
+      
     </div>
   );
 };
