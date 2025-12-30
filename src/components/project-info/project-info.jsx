@@ -1,7 +1,6 @@
 import { useParams, useNavigate, Navigate } from "react-router-dom";
 import { PROJECTS } from "../../data/projects-data";
 import "./project-info.scss";
-import { h3 } from "framer-motion/client";
 
 const ProjectInfo = () => {
   const { projectSlug } = useParams();
