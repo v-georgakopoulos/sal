@@ -43,6 +43,15 @@
             line-height: 1.6;
             font-weight: 400;
         }
+
+        .creative-fields {
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+          }
+        }
     }
   }
   .other-images {

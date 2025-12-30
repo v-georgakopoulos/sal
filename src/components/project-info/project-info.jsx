@@ -1,6 +1,7 @@
 import { useParams, useNavigate, Navigate } from "react-router-dom";
 import { PROJECTS } from "../../data/projects-data";
 import "./project-info.scss";
+import { h3 } from "framer-motion/client";
 
 const ProjectInfo = () => {
   const { projectSlug } = useParams();
@@ -8,18 +9,28 @@ const ProjectInfo = () => {
 
   const currentProject = PROJECTS.find((p) => p.slug === projectSlug);
 
-  if(!currentProject) {
-    return <Navigate to="/404" replace/>
+  if (!currentProject) {
+    return <Navigate to="/404" replace />;
   }
 
   const currentIndex = PROJECTS.findIndex((p) => p.slug === projectSlug);
 
   const nextProject = PROJECTS[currentIndex + 1];
 
-  const { images, title, client, location, scope, description } =
-    currentProject;
+  const {
+    images,
+    title,
+    client,
+    location,
+    scope,
+    description,
+    creativeFields,
+  } = currentProject;
   const coverImage = images[1];
   const otherImages = images.slice(2);
+
+  const firstParagraph = description[0];
+  const restParagraphs = description.slice(1);
 
   return (
     <div className="project-info-container">
@@ -41,7 +52,21 @@ const ProjectInfo = () => {
           </p>
         </div>
         <div className="descriptions">
-          {description.map((paragraph, index) => (
+
+          <p>{firstParagraph}</p>
+
+          {creativeFields && creativeFields.length > 0 && (
+            <div className="creative-fields">
+              <h3>Creative Fields:</h3>
+            <ul className="creative-fields">
+              {creativeFields.map((field, index) => (
+                <li key={index}>{field}</li>
+              ))}
+            </ul>
+            </div>
+          )}
+
+          {restParagraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>

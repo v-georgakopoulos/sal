@@ -11,7 +11,7 @@ const ArtworksCard = ({artwork}) => {
             <img src={artwork.images[0]} alt={artwork.name} />
           </div>
           <div className="artwork-overlay">
-            <p className="artwork-name">{artwork.name.toUpperCase()}</p>
+            <p className="artwork-name">{artwork.name}</p>
           </div>
           </Link>
         </div>
