@@ -11,7 +11,7 @@ const loaderVariants = {
         scale: [0.9, 1.05, 0.9],
         opacity: [0.6, 1, 0.6],
         transition: {
-            duration: 1.2,
+            duration: 0.8,
             ease: "easeInOut",
             repeat: Infinity,
         },

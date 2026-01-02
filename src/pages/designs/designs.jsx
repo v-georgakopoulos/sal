@@ -28,7 +28,7 @@ const Designs = () => {
       <AnimatePresence mode="wait">
         {hovered && (
           <motion.div
-            key={hovered} // important: tells Framer Motion a new element is entering
+            key={hovered}
             className="full-width-description"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
