@@ -1,9 +1,43 @@
 .designs-container {
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    img{
+    grid-template-columns: repeat(5, 1fr);
+
+    .design-card-container {
         width: 100%;
-        display: block;
+        position: relative;
+        transition: transform 1s ease;
+
+        img {
+            width: 100%;
+        }
+
+        &:hover {
+            .logo-container img {
+                transform: scale(1.1);
+                transition: transform 0.8s ease;
+            }
+        }
+
+        .logo-container {
+            position: absolute;
+            width: 90px;
+            top: 55%;
+            left: 68%;
+            transform: translate(-50%, -50%);
+
+            img {
+                width: 100%;
+            }
+        }
     }
+
+    .full-width-description {
+        position: absolute;
+        bottom: 100px;
+        left: 20%;
+        transform: translateX(-50%);
+        width: 70%;
+    }
+
+
 }

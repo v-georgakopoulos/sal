@@ -57,11 +57,11 @@ const ProjectInfo = () => {
           {creativeFields && creativeFields.length > 0 && (
             <div className="creative-fields">
               <h3>Creative Fields:</h3>
-            <ul className="creative-fields">
-              {creativeFields.map((field, index) => (
-                <li key={index}>{field}</li>
-              ))}
-            </ul>
+              <ul className="creative-fields">
+                {creativeFields.map((field, index) => (
+                  <li key={index}>{field}</li>
+                ))}
+              </ul>
             </div>
           )}
 
@@ -81,12 +81,12 @@ const ProjectInfo = () => {
 
       {nextProject && (
         <div className="next-project">
-          <button
+          <button className="next-project-button"
             onClick={() => {
               navigate(`/${nextProject.slug}`);
             }}
           >
-            Next Project →
+            Next Project
           </button>
         </div>
       )}

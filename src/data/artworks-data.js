@@ -23,5 +23,5 @@ export const ARTWORKS = [
         images: [pinkCover, p1, p2, p3, p4],
         description: "This portrait is built through repetition, interruption, and removal.The face appears gradually, then recedes, never fully resolving. Rather than presenting identity as a fixed image, the work approaches it as a shifting condition. Visibility and concealment operate simultaneously, allowing the image to exist in a state of tension. What remains is not a portrait in the traditional sense, but a record of how identity is constructed, disrupted, and reassembled. ",
         category: "artworks"
-    }
+    },
 ]

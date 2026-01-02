@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ARTWORKS } from "../../data/artworks-data";
 
@@ -6,10 +6,13 @@ import "./artwork-info.scss";
 
 const ArtworkInfo = () => {
     const { artworkSlug } = useParams();
+    const navigate = useNavigate();
 
-    const currentArtwork = ARTWORKS.find(
-        (art) => art.slug === artworkSlug
-    );
+    const currentArtwork = ARTWORKS.find((art) => art.slug === artworkSlug);
+
+    const currentIndex = ARTWORKS.findIndex((art) => art.slug === artworkSlug);
+
+    const nextArtwork = ARTWORKS[currentIndex + 1];
 
     const [selectedImage, setSelectedImage] = useState(null);
 
@@ -18,8 +21,6 @@ const ArtworkInfo = () => {
             setSelectedImage(currentArtwork.images[1]);
         }
     }, [currentArtwork]);
-
-
 
     if (!currentArtwork) {
         return <Navigate to="/404" replace />;
@@ -57,17 +58,39 @@ const ArtworkInfo = () => {
 
                 <div className="artworks-info-details">
                     <h3>Details</h3>
-                    <p>Artist <span>{artist}</span></p>
-                    <p>Title of Artwork <span>{title}</span></p>
-                    <p>Series <span>{series}</span></p>
-                    <p>Technique <span>{technique}</span></p>
-                    <p>Year <span>{year}</span></p>
-                    <p>Dimensions <span>{dimensions}</span></p>
-                    <p>Country of Origin <span>{country}</span></p>
-                    <p>Edition <span>{edition}</span></p>
-                    <p>Signed <span>{signed}</span></p>
-                    <p>Certificate <span>{certificate}</span></p>
-                    <p>Status <span>{status}</span></p>
+                    <p>
+                        Artist <span>{artist}</span>
+                    </p>
+                    <p>
+                        Title of Artwork <span>{title}</span>
+                    </p>
+                    <p>
+                        Series <span>{series}</span>
+                    </p>
+                    <p>
+                        Technique <span>{technique}</span>
+                    </p>
+                    <p>
+                        Year <span>{year}</span>
+                    </p>
+                    <p>
+                        Dimensions <span>{dimensions}</span>
+                    </p>
+                    <p>
+                        Country of Origin <span>{country}</span>
+                    </p>
+                    <p>
+                        Edition <span>{edition}</span>
+                    </p>
+                    <p>
+                        Signed <span>{signed}</span>
+                    </p>
+                    <p>
+                        Certificate <span>{certificate}</span>
+                    </p>
+                    <p>
+                        Status <span>{status}</span>
+                    </p>
                 </div>
 
                 <div className="artworks-small-images-container">
@@ -82,6 +105,12 @@ const ArtworkInfo = () => {
                         />
                     ))}
                 </div>
+                {nextArtwork && (
+                    <button className="next-artwork" onClick={() => navigate(`/artworks/${nextArtwork.slug}`)}>
+                        {" "}
+                        Next Artwork
+                    </button>
+                )}
             </div>
         </div>
     );

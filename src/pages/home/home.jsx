@@ -11,6 +11,9 @@ import logofolio from "../../assets/home-images/logofolio-footer.jpg";
 import "./home.scss";
 
 const Home = () => {
+
+  const filteredSubCategories = SUBCATEGORIES.filter(cat => cat.name !== "three-sixty")
+
   return (
     <main className="home-container">
       <section className="main-banner">
@@ -22,12 +25,13 @@ const Home = () => {
           {MAIN_CATEGORIES.map((cat) => (
             <div key={cat.id} className="main-category">
               <Link to={cat.path}>
-                <img src={cat.image} alt={cat.name} />
+                <img src={cat.image} alt={cat.name} loading="lazy" />
               </Link>
               <div className="overlay-category">
                 <img
                   src={cat.logo}
                   alt={`${cat.name} logo`}
+                  loading="lazy"
                   className="logo-overlay"
                 />
               </div>
@@ -39,10 +43,10 @@ const Home = () => {
       <section className="sub-categories">
         <h1>Creative Fields</h1>
         <div className="sub-grid">
-          {SUBCATEGORIES.map((sub) => (
+          {filteredSubCategories.map((sub) => (
             <div key={sub.id} className="sub-category">
               <Link to={`/design/${sub.path}`}>
-                <img src={sub.image} alt={sub.name} />
+                <img src={sub.image} alt={sub.name} loading="lazy" />
               </Link>
               <div className="sub-overlay">
                 <p className="sub-name">{sub.name.toUpperCase()}</p>
@@ -57,14 +61,14 @@ const Home = () => {
       </section>
 
       <section className="home-banner">
-        <img src={subBanner} alt="Sal Athens" />
+        <img src={subBanner} alt="Sal Athens" loading="lazy" />
       </section>
 
       <section>
         <div className="rewards-container">
-          <img src={logoRewards} alt="Rewards" />
-          <img src={logoRewards} alt="Rewards" />
-          <img src={logoRewards} alt="Rewards" />
+          <img src={logoRewards} alt="Rewards" loading="lazy" />
+          <img src={logoRewards} alt="Rewards" loading="lazy" />
+          <img src={logoRewards} alt="Rewards" loading="lazy" />
         </div>
       </section>
 
@@ -75,6 +79,7 @@ const Home = () => {
             src={logofolio}
             alt="Sal Athens Magazine"
             style={{ cursor: "pointer" }}
+            loading="lazy"
           />
         </a>
       </section>
