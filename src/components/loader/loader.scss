@@ -1,0 +1,14 @@
+.loader-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    overflow: hidden;
+
+    img {
+        width: 40px;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    }
+}

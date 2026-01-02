@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-import contactBanner from "../../assets/contact-banner.jpg";
+import contactBanner from "../../assets/contact-images/contact-banner.jpg";
 import "./contact.scss";
 
 const defaultFormFields = {
@@ -45,8 +45,7 @@ const Contact = () => {
 
           setTimeout(() => setSuccess(false), 3000);
         },
-        (error) => {
-          console.log(error)
+        () => {
           setError(true);
           setSuccess(false);
           setLoading(false);

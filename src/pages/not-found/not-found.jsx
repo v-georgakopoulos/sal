@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import errorImg from "../../assets/error.jpg"
+import errorImg from "../../assets/error-images/error.jpg"
 import "./not-found.scss";
 
 const NotFound = () => {
@@ -9,9 +9,9 @@ const NotFound = () => {
     <div className="not-found">
       <div>
         <img className="error-image" src={errorImg} alt="404" />
-      <button onClick={() => navigate("/")} className="error-btn">
-        Go Home
-      </button>
+        <button onClick={() => navigate("/")} className="error-btn">
+          Go Home
+        </button>
       </div>
     </div>
   );

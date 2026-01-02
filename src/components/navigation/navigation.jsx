@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { NAVIGATION_LINKS } from "../../data/navigation-data";
-import mainLogo from "../../assets/main-logo.png";
-import faviconLogo from "../../assets/favicon-Sal.png";
+import mainLogo from "../../assets/home-images/main-logo.png";
+import faviconLogo from "../../assets/home-images/favicon-Sal.png";
 
 import "./navigation.scss";
 
@@ -43,7 +43,7 @@ const Navigation = () => {
       </div>
 
       <div className={`menu-drawer ${menuOpen ? "open" : ""}`}>
-    
+
         <ul className={`menu-panel ${activeSubmenu ? "slide-left" : ""}`}>
           {NAVIGATION_LINKS.map((link) => {
             const hasSubmenu = Boolean(link.subcategories);

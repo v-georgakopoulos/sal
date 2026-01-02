@@ -3,9 +3,9 @@ import { MAIN_CATEGORIES, SUBCATEGORIES } from "../../data/categories-data";
 import LatestProject from "../../components/latest-project/latest-project";
 import Footer from "../../components/footer/footer";
 import HeroSlider from "../../components/hero-slider/hero-slider";
-import subBanner from "../../assets/home-banner-two.jpg";
-import logoRewards from "../../assets/logo-rewards.svg"
-import logofolio from "../../assets/logofolio-footer.jpg";
+import subBanner from "../../assets/home-images/home-banner-two.jpg";
+import logoRewards from "../../assets/home-images/logo-rewards.svg"
+import logofolio from "../../assets/home-images/logofolio-footer.jpg";
 
 
 import "./home.scss";
@@ -14,14 +14,14 @@ const Home = () => {
   return (
     <main className="home-container">
       <section className="main-banner">
-        <HeroSlider/>
+        <HeroSlider />
       </section>
 
       <section className="main-categories">
         <div className="main-grid">
           {MAIN_CATEGORIES.map((cat) => (
             <div key={cat.id} className="main-category">
-              <Link  to={cat.path}>
+              <Link to={cat.path}>
                 <img src={cat.image} alt={cat.name} />
               </Link>
               <div className="overlay-category">
@@ -40,10 +40,10 @@ const Home = () => {
         <h1>Creative Fields</h1>
         <div className="sub-grid">
           {SUBCATEGORIES.map((sub) => (
-            <div key={sub.id}  className="sub-category">
-                <Link to={`/design/${sub.path}`}>
-                  <img src={sub.image} alt={sub.name} />
-                </Link>
+            <div key={sub.id} className="sub-category">
+              <Link to={`/design/${sub.path}`}>
+                <img src={sub.image} alt={sub.name} />
+              </Link>
               <div className="sub-overlay">
                 <p className="sub-name">{sub.name.toUpperCase()}</p>
               </div>

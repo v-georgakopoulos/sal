@@ -1,4 +1,4 @@
-import { ARTWORKS } from "../../data/projects-data";
+import { ARTWORKS } from "../../data/artworks-data";
 import ArtworksCard from "../../components/artwork-card/artwork-card";
 
 import "./artworks.scss"

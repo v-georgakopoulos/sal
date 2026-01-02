@@ -1,4 +1,4 @@
-import aboutBanner from "../../assets/about-banner.jpg"
+import aboutBanner from "../../assets/about-images/about-banner.jpg"
 import "./about.scss"
 const About = () => {
   return (
