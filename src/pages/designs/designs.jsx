@@ -25,22 +25,25 @@ const Designs = () => {
           </Link>
         </div>
       ))}
-      <AnimatePresence mode="wait">
-        {hovered && (
-          <motion.div
-            key={hovered}
-            className="full-width-description"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            {SUBCATEGORIES.find(sub => sub.id === hovered)?.description}
-          </motion.div>
-        )}
-      </AnimatePresence>
 
+      <div className="description-wrapper">
+        <AnimatePresence mode="wait">
+          {hovered && (
+            <motion.div
+              key={hovered}
+              className="full-width-description"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              {SUBCATEGORIES.find(sub => sub.id === hovered)?.description}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
+
   );
 };
 

@@ -25,7 +25,7 @@ const Home = () => {
           {MAIN_CATEGORIES.map((cat) => (
             <div key={cat.id} className="main-category">
               <Link to={cat.path}>
-                <img src={cat.image} alt={cat.name} loading="lazy" />
+                <img src={cat.image} alt={cat.name} />
               </Link>
               <div className="overlay-category">
                 <img
@@ -46,7 +46,7 @@ const Home = () => {
           {filteredSubCategories.map((sub) => (
             <div key={sub.id} className="sub-category">
               <Link to={`/design/${sub.path}`}>
-                <img src={sub.image} alt={sub.name} loading="lazy" />
+                <img src={sub.image} alt={sub.name} />
               </Link>
               <div className="sub-overlay">
                 <p className="sub-name">{sub.name.toUpperCase()}</p>
@@ -61,14 +61,14 @@ const Home = () => {
       </section>
 
       <section className="home-banner">
-        <img src={subBanner} alt="Sal Athens" loading="lazy" />
+        <img src={subBanner} alt="Sal Athens" />
       </section>
 
       <section>
         <div className="rewards-container">
-          <img src={logoRewards} alt="Rewards" loading="lazy" />
-          <img src={logoRewards} alt="Rewards" loading="lazy" />
-          <img src={logoRewards} alt="Rewards" loading="lazy" />
+          <img src={logoRewards} alt="Rewards" />
+          <img src={logoRewards} alt="Rewards" />
+          <img src={logoRewards} alt="Rewards" />
         </div>
       </section>
 
@@ -79,7 +79,6 @@ const Home = () => {
             src={logofolio}
             alt="Sal Athens Magazine"
             style={{ cursor: "pointer" }}
-            loading="lazy"
           />
         </a>
       </section>
