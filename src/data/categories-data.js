@@ -10,11 +10,11 @@ import artworksLogo from "../assets/home-images/artworks-logo.svg"
 import designsLogo from "../assets/home-images/designs-logo.svg"
 import graydesLogo from "../assets/home-images/graydes-logo.svg"
 
-import designSubcategoryImageA from "../assets/designs-images/Background-a.jpg"
-import designSubcategoryImageB from "../assets/designs-images/Background-b.jpg"
-import designSubcategoryImageC from "../assets/designs-images/Background-c.jpg"
-import designSubcategoryImageD from "../assets/designs-images/Background-d.jpg"
-import designSubcategoryImageE from "../assets/designs-images/Background-e.jpg"
+import designSubcategoryImageA from "../assets/designs-images/a-kremastra.jpg"
+import designSubcategoryImageB from "../assets/designs-images/b-kremastra.jpg"
+import designSubcategoryImageC from "../assets/designs-images/c-kremastra.jpg"
+import designSubcategoryImageD from "../assets/designs-images/d-kremastra.jpg"
+import designSubcategoryImageE from "../assets/designs-images/e-kremastra.jpg"
 
 import designLogo from "../assets/designs-images/logo2.svg"
 import illustrationLogo from "../assets/designs-images/illustrations.svg"
@@ -24,7 +24,7 @@ import packagingLogo from "../assets/designs-images/packaging.svg"
 
 export const MAIN_CATEGORIES = [
   { id: 1, name: "Artworks", image: artworks, logo: artworksLogo, path: "/artworks" },
-  { id: 2, name: "Designs", image: designs, logo: designsLogo, path: "/design" },
+  { id: 2, name: "Designs", image: designs, logo: designsLogo, path: "/designs" },
   { id: 3, name: "Graydes", image: graydes, logo: graydesLogo, path: "/graydes" },
 ];
 

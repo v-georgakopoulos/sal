@@ -1,5 +1,5 @@
 export const NAVIGATION_LINKS = [
-   {
+  {
     id: 1,
     name: "About",
     path: "/about"
@@ -12,27 +12,27 @@ export const NAVIGATION_LINKS = [
   {
     id: 3,
     name: "Designs",
-    path: "/design",
+    path: "/designs",
     subcategories: [
       {
         id: 31,
         name: "Logo Design",
-        path: "design/logo-design"
+        path: "designs/logo-design"
       },
       {
         id: 32,
         name: "Illustration",
-        path: "design/illustration"
+        path: "designs/illustration"
       },
       {
         id: 33,
         name: "Interior Design",
-        path: "design/interior-design"
+        path: "designs/interior-design"
       },
       {
         id: 34,
         name: "Packaging",
-        path: "design/packaging"
+        path: "designs/packaging"
       }
     ]
   },
@@ -41,7 +41,7 @@ export const NAVIGATION_LINKS = [
     name: "Graydes",
     path: "/graydes"
   },
- 
+
   {
     id: 5,
     name: "Contact",

@@ -3,18 +3,32 @@ import { PROJECTS } from "../../data/projects-data";
 import "./project-info.scss";
 
 const ProjectInfo = () => {
-  const { projectSlug } = useParams();
+  const { projectSlug, subcategory } = useParams();
   const navigate = useNavigate();
 
-  const currentProject = PROJECTS.find((p) => p.slug === projectSlug);
+  const currentProject = PROJECTS.find(
+    project =>
+      project.slug === projectSlug &&
+      project.subcategory.includes(subcategory)
+  );
 
   if (!currentProject) {
     return <Navigate to="/404" replace />;
   }
 
-  const currentIndex = PROJECTS.findIndex((p) => p.slug === projectSlug);
+  const subcategoryProjects = PROJECTS.filter(project =>
+    project.subcategory.includes(subcategory)
+  );
 
-  const nextProject = PROJECTS[currentIndex + 1];
+
+  const currentIndex = subcategoryProjects.findIndex(
+    project => project.slug === projectSlug
+  );
+
+  const nextProject =
+    currentIndex !== -1 && currentIndex < subcategoryProjects.length - 1
+      ? subcategoryProjects[currentIndex + 1]
+      : null;
 
   const {
     images,
@@ -83,7 +97,7 @@ const ProjectInfo = () => {
         <div className="next-project">
           <button className="next-project-button"
             onClick={() => {
-              navigate(`/${nextProject.slug}`);
+              navigate(`/designs/${subcategory}/${nextProject.slug}`);
             }}
           >
             Next Project

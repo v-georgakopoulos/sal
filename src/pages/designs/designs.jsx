@@ -17,7 +17,7 @@ const Designs = () => {
           onMouseEnter={() => setHovered(sub.id)}
           onMouseLeave={() => setHovered(null)}
         >
-          <Link to={`/design/${sub.path}`}>
+          <Link to={`/designs/${sub.path}`}>
             <img src={sub.categoryImage} alt={sub.name} />
             <div className="logo-container">
               <img src={sub.logo} alt={sub.name} />

@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: repeat(5, 1fr);
 
     .design-card-container {
         position: relative;
@@ -16,9 +16,10 @@
 
         .logo-container {
             position: absolute;
-            width: 90px;
+            width: 120px;
             top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
             transition: transform 0.8s ease;
 
             img {
@@ -47,18 +48,4 @@
         max-width: 1024px;
         width: 100%;
     }
-}
-
-.design-card-container:nth-child(1) .logo-container {
-    transform: translate(50%, -50%);
-}
-
-.design-card-container:nth-child(2) .logo-container,
-.design-card-container:nth-child(3) .logo-container,
-.design-card-container:nth-child(4) .logo-container {
-    transform: translate(-50%, -50%);
-}
-
-.design-card-container:nth-child(5) .logo-container {
-    transform: translate(-150%, -50%);
 }

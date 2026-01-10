@@ -5,16 +5,16 @@ import ProjectCard from "../../components/project-card/project-card";
 import "./category.scss"
 
 const Category = () => {
-  const { category } = useParams();
+  const { subcategory } = useParams();
 
   const filteredProjects = PROJECTS.filter(project =>
-    project.subcategory.includes(category)
+    project.subcategory.includes(subcategory)
   );
-
   return (
     <div className="category-container">
       <div className="grid-category">
-        {filteredProjects.map(project => <ProjectCard key={project.id} project={project} />)}
+        {filteredProjects.map(project =>
+          <ProjectCard key={project.id} project={project} subcategory={subcategory} />)}
       </div>
     </div>
   );

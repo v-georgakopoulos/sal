@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { NAVIGATION_LINKS } from "../../data/navigation-data";
 import mainLogo from "../../assets/home-images/main-logo.png";
 import faviconLogo from "../../assets/home-images/favicon-Sal.png";
@@ -21,12 +21,16 @@ const Navigation = () => {
     setActiveSubmenu(null);
   };
 
+  const handleSubmenuToggle = (link) => {
+    setActiveSubmenu((prev) => (prev?.id === link.id ? null : link));
+  };
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
 
   return (
-    <div className="navigation-wrapper" onMouseLeave={closeMenu}>
+    <nav className="navigation-wrapper">
       <Link className="logo-link" to="/" onClick={closeMenu}>
         <img src={mainLogo} alt="Sal Athens" />
       </Link>
@@ -42,55 +46,52 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div className={`menu-drawer ${menuOpen ? "open" : ""}`}>
+      {/* Sidebar menu */}
+      <ul
+        className={`menu ${menuOpen ? "open" : ""}`}
+        onMouseLeave={closeMenu}
+      >
+        {NAVIGATION_LINKS.map((link) => {
+          const hasSubmenu = Boolean(link.subcategories);
+          const isActive = activeSubmenu?.id === link.id;
 
-        <ul className={`menu-panel ${activeSubmenu ? "slide-left" : ""}`}>
-          {NAVIGATION_LINKS.map((link) => {
-            const hasSubmenu = Boolean(link.subcategories);
+          return (
+            <li key={link.id} className="menu-item">
+              <div className="menu-row">
+                <Link to={link.path} onClick={closeMenu}>
+                  {link.name}
+                </Link>
+                {hasSubmenu && (
+                  <button
+                    className={`submenu-arrow ${isActive ? "active" : ""}`}
+                    onClick={() => handleSubmenuToggle(link)}
+                  >
+                    <ChevronDown size={18} />
+                  </button>
+                )}
+              </div>
 
-            return (
-              <li key={link.id} className="menu-item">
-                <div className="menu-row">
-                  <Link to={link.path} onClick={closeMenu}>
-                    {link.name}
-                  </Link>
-
-                  {hasSubmenu && (
-                    <button
-                      className="submenu-arrow"
-                      onClick={() => setActiveSubmenu(link)}
-                    >
-                      <ChevronRight size={18} />
-                    </button>
-                  )}
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-
-        <ul className={`submenu-panel ${activeSubmenu ? "open" : ""}`}>
-          <li className="submenu-header">
-            <button onClick={() => setActiveSubmenu(null)}>
-              <ChevronLeft size={18} />
-            </button>
-            <span>{activeSubmenu?.name}</span>
-          </li>
-
-          {activeSubmenu?.subcategories.map((sub) => (
-            <li key={sub.id}>
-              <Link to={sub.path} onClick={closeMenu}>
-                {sub.name}
-              </Link>
+              {/* Submenu dropdown */}
+              {hasSubmenu && (
+                <ul className={`submenu-dropdown ${isActive ? "open" : ""}`}>
+                  {link.subcategories.map((sub) => (
+                    <li key={sub.id}>
+                      <Link to={sub.path} onClick={closeMenu}>
+                        {sub.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
-          ))}
-        </ul>
-      </div>
+          );
+        })}
+      </ul>
 
       <div className="favicon-logo">
         <img src={faviconLogo} alt="Sal Athens" />
       </div>
-    </div>
+    </nav>
   );
 };
 

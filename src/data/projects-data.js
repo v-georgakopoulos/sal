@@ -73,7 +73,7 @@ export const PROJECTS = [
     images: [fosCover, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10],
     creativeFields: ["Naming", "Logo Design ", "Brand Identity ", "Art Direction ", "Concept Development ", "Creative Direction & Project Oversight "],
     category: ["design"],
-    subcategory: ["logo-design", "interior-design"],
+    subcategory: ["interior-design", "logo-design",],
   },
   {
     id: 2,
@@ -135,7 +135,7 @@ export const PROJECTS = [
     location: "Piraeus",
     scope: "Logo Design, Brand Identity, Interior Design, Concept Development",
     description: ["In 2025, QMS Maritime Training Center, one of the leading maritime training institutions in Greece, underwent a complete transformation of its brand and physical presence. Founded in 1996 and based in Piraeus, QMS has trained more than 45,000 seafarers and shipping executives worldwide, delivering internationally accredited maritime training programs. The project focused on redefining the institution’s identity through a comprehensive rebranding process that began with the design of a new logo and corporate identity and extended to the complete architectural redesign of the training center. The aim was to create a contemporary, minimal and robust branding system capable of standing confidently within a highly competitive international environment and representing QMS across global maritime exhibitions. From brand identity and visual language to architectural planning, 3D design and full execution, the new image was translated into a cohesive brand experience that reflects precision, credibility and the forward-looking nature of modern maritime education."],
-    images: [qmsCover, qms1, qms2, qms3, qms4, qms4, qms5, qms6, qms7],
+    images: [qmsCover, qms1, qms2, qms3, qms4, qms5, qms5, qms6, qms7],
     category: ["design"],
     subcategory: ["logo-design", "three-sixty"],
   },

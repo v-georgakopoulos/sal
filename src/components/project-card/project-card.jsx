@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "./project-card.scss";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, subcategory }) => {
   return (
     <div className="project-card-container">
-      <Link to={`/${project.slug}`} className="project-card">
+      <Link to={`/designs/${subcategory}/${project.slug}`} className="project-card">
         <div className="project-card-image">
           <img src={project.images[0]} alt={project.name} />
         </div>

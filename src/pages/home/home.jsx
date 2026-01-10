@@ -4,7 +4,7 @@ import LatestProject from "../../components/latest-project/latest-project";
 import Footer from "../../components/footer/footer";
 import HeroSlider from "../../components/hero-slider/hero-slider";
 import subBanner from "../../assets/home-images/home-banner-two.jpg";
-import logoRewards from "../../assets/home-images/logo-rewards.svg"
+import logoRewards from "../../assets/home-images/logos-rewards.svg"
 import logofolio from "../../assets/home-images/logofolio-footer.jpg";
 
 
@@ -45,7 +45,7 @@ const Home = () => {
         <div className="sub-grid">
           {filteredSubCategories.map((sub) => (
             <div key={sub.id} className="sub-category">
-              <Link to={`/design/${sub.path}`}>
+              <Link to={`/designs/${sub.path}`}>
                 <img src={sub.image} alt={sub.name} />
               </Link>
               <div className="sub-overlay">
@@ -66,8 +66,6 @@ const Home = () => {
 
       <section>
         <div className="rewards-container">
-          <img src={logoRewards} alt="Rewards" />
-          <img src={logoRewards} alt="Rewards" />
           <img src={logoRewards} alt="Rewards" />
         </div>
       </section>
