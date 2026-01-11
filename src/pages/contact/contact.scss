@@ -1,7 +1,13 @@
+@import "../../styles/mixins.scss";
+
 .contact-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
 
     .contact-image {
         width: 100%;
@@ -19,39 +25,82 @@
         align-items: center;
         justify-content: space-evenly;
 
+
         .contact-details {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
 
+            @include mobile {
+                gap: unset;
+            }
+
             h1 {
                 font-size: 48px;
                 font-weight: 100;
+
+                @include mobile {
+                    font-size: 29px;
+                    margin: 20px auto;
+                }
             }
 
             h3 {
                 font-size: 28px;
                 font-weight: 400;
+
+                @include mobile {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    margin-top: -10px;
+                }
             }
 
-            p {
+            .address {
                 font-size: 1rem;
                 text-align: center;
                 width: 100%;
                 font-weight: 300;
+
+                @include mobile {
+                    margin-top: 10px;
+                }
+
+                span {
+                    display: inline;
+
+                    @include mobile {
+                        display: block;
+                        margin-top: 5px;
+
+                    }
+                }
+
             }
 
             .telephone {
                 letter-spacing: 1px;
                 font-size: 1rem;
                 font-weight: 500;
+
+                @include mobile {
+                    margin-top: 5px;
+                    font-size: 1.1rem;
+
+                }
             }
 
 
             .map-directions {
                 font-size: 32px;
                 letter-spacing: 7px;
+
+                @include mobile {
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                    letter-spacing: 10px;
+                }
             }
 
         }
@@ -59,11 +108,21 @@
         .contact-form {
             padding-bottom: 20px;
 
+            @include mobile {
+                margin-bottom: 20px;
+            }
+
             form {
-                width: 600px;
+                max-width: 600px;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
+                @include mobile {
+                    width: calc(100% - 80px);
+                    margin: auto;
+                }
 
                 input {
                     border: none;

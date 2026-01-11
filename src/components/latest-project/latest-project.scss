@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .latest-project-container {
   width: 100%;
 
@@ -5,14 +7,23 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
     .latest-image {
       overflow: hidden;
+
+      @include mobile {
+        order: 2;
+      }
 
       img {
         width: 100%;
         display: block;
         filter: grayscale(100%);
         transition: transform 1s ease;
+
 
         &:hover {
           transform: scale(1.05);
@@ -27,6 +38,11 @@
       align-items: center;
       justify-content: center;
 
+      @include mobile {
+        order: 1;
+        height: 235px;
+      }
+
       &:hover h1 {
         transform: scale(1.1);
       }
@@ -36,6 +52,10 @@
         font-weight: 100;
         transition: transform 1s ease;
         margin-top: -1.1rem;
+
+        @include mobile {
+          font-size: 38px;
+        }
       }
     }
   }

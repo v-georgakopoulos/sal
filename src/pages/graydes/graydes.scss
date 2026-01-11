@@ -1,6 +1,12 @@
+@import "../../styles//mixins.scss";
+
 .graydes-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
 
     .graydes-img {
         width: 100%;
@@ -12,22 +18,36 @@
     }
 
     .graydes-info {
-        width: 610px;
+        max-width: 610px;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-
         .graydes-logo {
             width: 300px;
             padding-bottom: 20px;
+
+            @include mobile {
+                width: 180px;
+                margin: 28px auto;
+            }
         }
 
         p {
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.6;
+
+
+            @include mobile {
+                width: 100%;
+                padding: 30px;
+                margin: auto;
+                margin-top: -54px;
+                margin-bottom: 20px;
+            }
         }
 
         .strong-par {
@@ -35,10 +55,23 @@
             flex-direction: column;
             gap: 5px;
             margin: 20px 0;
+
+            @include mobile {
+                width: 90%;
+                padding: 30px;
+                margin-top: -54px;
+            }
         }
 
         i {
             font-size: 15px;
+
+            @include mobile {
+                width: 90%;
+                padding: 30px;
+                margin-top: -54px;
+                margin-bottom: 30px;
+            }
         }
     }
 
