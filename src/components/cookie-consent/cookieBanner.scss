@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -9,17 +11,37 @@
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
+
+    @include mobile {
+        padding: 24px 36px;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+
+        @include mobile {
+            font-size: 0.9rem;
+            margin-right: 20px;
+            padding: 4px;
+        }
+    }
 }
 
 .cookie-banner a {
-    color: gray;
+    color: rgb(155, 154, 154);
 }
 
 .actions button {
     margin-left: 8px;
-    padding: 8px 14px;
+    width: 90px;
+    height: 30px;
     border: none;
     cursor: pointer;
+
+    @include mobile {
+        margin-bottom: 5px;
+    }
 }
 
 .accept {

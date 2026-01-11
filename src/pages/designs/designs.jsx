@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SUBCATEGORIES } from "../../data/categories-data";
 
-import "./designs.scss"
+import "./designs.scss";
 
 const Designs = () => {
   const [hovered, setHovered] = useState(null);
@@ -23,9 +23,15 @@ const Designs = () => {
               <img src={sub.logo} alt={sub.name} />
             </div>
           </Link>
+
+          {/* MOBILE ONLY description */}
+          <div className="mobile-description">
+            {sub.description}
+          </div>
         </div>
       ))}
 
+      {/* DESKTOP only description with animation */}
       <div className="description-wrapper">
         <AnimatePresence mode="wait">
           {hovered && (
@@ -43,7 +49,6 @@ const Designs = () => {
         </AnimatePresence>
       </div>
     </div>
-
   );
 };
 

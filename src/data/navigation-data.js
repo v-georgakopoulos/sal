@@ -35,7 +35,7 @@ export const NAVIGATION_LINKS = [
         path: "designs/illustration"
       },
       {
-        id: 34,
+        id: 35,
         name: "Packaging",
         path: "designs/packaging"
       }

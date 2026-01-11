@@ -71,11 +71,11 @@ const Contact = () => {
         <div className="contact-details">
           <h1>LET’S STAY CONNECTED</h1>
           <h3>DESIGN STUDIO</h3>
-          <p class="address">
+          <p className="address">
             <span>24 Megalou Vasileiou Str</span>
             <span>Nea Smyrni 17122 Athens Greece</span>
           </p>
-          <p className="telephone"> +30 211 0041015</p>
+          <a className="telephone" href="tel:+30 211 00441015"> +30 211 0041015</a>
           <h1 className="map-directions">37.9438°N23.7155°E</h1>
         </div>
 

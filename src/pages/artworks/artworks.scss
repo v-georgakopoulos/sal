@@ -1,11 +1,21 @@
+@import "../../styles/mixins.scss";
+
 .artworks-container {
     width: calc(100% - 20px);
     margin: 20px auto;
+
+    @include mobile {
+        width: 100%;
+    }
 
     .artworks-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
         gap: 10px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
     }
 }

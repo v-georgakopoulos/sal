@@ -1,20 +1,29 @@
+@import "../../styles/mixins.scss";
+
 .not-found {
-  width: 400px;  
-  height:800px;
+  max-width: 400px;
+  width: 100%;
+  height: 800px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  @include mobile {
+    width: calc(100% - 100px);
+    height: 700px;
+  }
 
-  div{
+
+  div {
     display: flex;
     flex-direction: column;
     gap: 20px;
-      .error-image {
-            width: 100%;
-      }
+
+    .error-image {
+      width: 100%;
+    }
   }
 
 
@@ -29,6 +38,7 @@
     font-size: 14px;
     cursor: pointer;
     transition: background-color 1s ease;
+
     &:hover {
       background-color: lighten(black, 40%);
     }

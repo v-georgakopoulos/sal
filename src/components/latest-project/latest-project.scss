@@ -9,13 +9,16 @@
 
     @include mobile {
       grid-template-columns: 1fr;
+      grid-template-areas:
+        "latest-project"
+        "latest-image";
     }
 
     .latest-image {
       overflow: hidden;
 
       @include mobile {
-        order: 2;
+        grid-area: latest-image;
       }
 
       img {
@@ -39,8 +42,8 @@
       justify-content: center;
 
       @include mobile {
-        order: 1;
         height: 235px;
+        grid-area: latest-project;
       }
 
       &:hover h1 {

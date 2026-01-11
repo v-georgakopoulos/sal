@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .project-info-container {
   .cover-image {
     width: 100%;
@@ -9,14 +11,24 @@
   }
 
   .info {
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 50px auto;
 
+    @include mobile {
+      margin: 20px auto 0 30px;
+    }
+
+
     h3 {
       margin-right: auto;
       margin-bottom: 20px;
+
+      @include mobile {
+        margin-bottom: 5px;
+      }
     }
 
     .info-details {
@@ -28,6 +40,10 @@
       p {
         color: black;
         font-weight: bold;
+
+        @include mobile {
+          width: 70%;
+        }
 
         span {
           font-weight: 400;
@@ -43,6 +59,10 @@
       p {
         line-height: 1.6;
         font-weight: 400;
+
+        @include mobile {
+          width: 85%;
+        }
       }
 
       .creative-fields {
@@ -58,6 +78,10 @@
 
   .other-images {
     width: 100%;
+
+    @include mobile {
+      margin-top: 25px;
+    }
 
     .other-image {
       width: 100%;
@@ -76,6 +100,10 @@
     text-align: center;
     margin-top: 10px;
 
+    @include mobile {
+      margin-top: 30px;
+    }
+
 
     .next-project-button {
       border: none;
@@ -86,6 +114,12 @@
       font-size: 2.5rem;
       font-weight: 300;
       cursor: pointer;
+
+      @include mobile {
+        font-size: 1.5rem;
+        font-weight: 300;
+
+      }
     }
   }
 }

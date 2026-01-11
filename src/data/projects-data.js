@@ -126,7 +126,7 @@ export const PROJECTS = [
     createdAt: Date.now(),
     name: "Athens Voice",
     slug: "athens-voice",
-    title: "Downtown – Athens Voice Cover",
+    title: "Downtown | Athens Voice Cover",
     client: "Athens Voice",
     location: "Athens",
     scope: "Illustration",
