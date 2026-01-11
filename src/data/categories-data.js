@@ -40,12 +40,12 @@ export const SUBCATEGORIES = [
   },
   {
     id: 2,
-    name: "Illustration",
-    image: illustration,
+    name: "Interior Design",
+    image: interiorDesign,
     categoryImage: designSubcategoryImageB,
-    logo: illustrationLogo,
-    path: "illustration",
-    description: "I, together with my team of collaborators, create interior spaces in perfect harmony with a brand’s identity, with meticulous attention to detail. From retail stores, bars, restaurants, street food concepts, gyms, studios, to private apartments, each project is developed from concept to full execution with specialized collaborators and technical teams. Every space is realized as a high-end result, tailored to the specific budget, ensuring that the design not only reflects the brand but also creates an immersive and cohesive experience."
+    logo: interiorLogo,
+    path: "interior-design",
+    description: "A graduate of the Athens School of Fine Arts, I create illustrations that begin as hand-drawn artworks and evolve into polished digital pieces, reflecting a very high level of design and artistic mastery. My creations have brought a distinctive visual identity to brands such as Adidas, Converse, WeSC, Sprite, Staff Jeans, Prime Timers and NewCult and have been featured in projects including the cover of Athens Voice, book covers, interior spaces, store windows, limited-edition packaging, private collections and social media campaigns. Every illustration is crafted with a high-end aesthetic, infusing your brand or product with personality, depth and lasting impact."
   },
   {
     id: 3,
@@ -57,12 +57,12 @@ export const SUBCATEGORIES = [
   },
   {
     id: 4,
-    name: "Interior Design",
-    image: interiorDesign,
+    name: "Illustration",
+    image: illustration,
     categoryImage: designSubcategoryImageD,
-    logo: interiorLogo,
-    path: "interior-design",
-    description: "A graduate of the Athens School of Fine Arts, I create illustrations that begin as hand-drawn artworks and evolve into polished digital pieces, reflecting a very high level of design and artistic mastery. My creations have brought a distinctive visual identity to brands such as Adidas, Converse, WeSC, Sprite, Staff Jeans, Prime Timers and NewCult and have been featured in projects including the cover of Athens Voice, book covers, interior spaces, store windows, limited-edition packaging, private collections and social media campaigns. Every illustration is crafted with a high-end aesthetic, infusing your brand or product with personality, depth and lasting impact."
+    logo: illustrationLogo,
+    path: "illustration",
+    description: "I, together with my team of collaborators, create interior spaces in perfect harmony with a brand’s identity, with meticulous attention to detail. From retail stores, bars, restaurants, street food concepts, gyms, studios, to private apartments, each project is developed from concept to full execution with specialized collaborators and technical teams. Every space is realized as a high-end result, tailored to the specific budget, ensuring that the design not only reflects the brand but also creates an immersive and cohesive experience."
   },
   {
     id: 5,

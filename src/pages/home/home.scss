@@ -43,12 +43,24 @@
         transition: opacity 1s ease;
 
         .logo-overlay {
-          max-width: 45%;
-          max-height: 45%;
+          max-width: 35%;
+          max-height: 35%;
           opacity: 0;
           transform: scale(0.95);
           transition: opacity 1s ease, transform 1s ease;
+
         }
+
+      }
+
+      &:nth-child(1) .logo-overlay {
+        max-width: 45%;
+        max-height: 45%;
+      }
+
+      &:nth-child(3) .logo-overlay {
+        max-width: 47%;
+        max-height: 47%;
       }
 
       &:hover {
@@ -82,17 +94,22 @@
 
   .sub-categories {
     width: 100%;
+    margin-top: -60px;
 
     h1 {
       text-align: center;
-      font-size: 50px;
+      font-size: 46px;
       font-weight: 100;
-      margin-bottom: 20px;
+      margin-bottom: 7px;
     }
 
+
+
     .sub-grid {
+      padding: 1rem;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
 
       .sub-category {
         position: relative;
@@ -118,7 +135,7 @@
           transition: opacity 1s ease;
 
           .sub-name {
-            font-size: 40px;
+            font-size: 38px;
             font-weight: 100;
             color: white;
             opacity: 0;
@@ -145,29 +162,53 @@
     }
   }
 
+  .home-banner {
+    overflow: hidden;
+
+    img {
+      transition: transform 0.8s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+
   .rewards-container {
     display: grid;
     place-items: center;
 
     img {
       width: 150px;
+      transition: transform 0.8s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
   .logofolio {
     width: 100%;
+    overflow: hidden;
 
     h3 {
       color: black;
       text-align: center;
-      font-size: 30px;
-      font-weight: 100;
+      font-size: 2rem;
+      font-weight: 200;
       margin-bottom: 20px;
     }
 
     img {
       width: 100%;
       display: block;
+      transition: transform 0.8s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }

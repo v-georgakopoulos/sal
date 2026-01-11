@@ -49,7 +49,7 @@ const Navigation = () => {
       {/* Sidebar menu */}
       <ul
         className={`menu ${menuOpen ? "open" : ""}`}
-        onMouseLeave={closeMenu}
+      // onMouseLeave={closeMenu}
       >
         {NAVIGATION_LINKS.map((link) => {
           const hasSubmenu = Boolean(link.subcategories);
@@ -66,7 +66,7 @@ const Navigation = () => {
                     className={`submenu-arrow ${isActive ? "active" : ""}`}
                     onClick={() => handleSubmenuToggle(link)}
                   >
-                    <ChevronDown size={18} />
+                    <ChevronDown size={17} strokeWidth={1} />
                   </button>
                 )}
               </div>

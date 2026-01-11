@@ -1,0 +1,33 @@
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cookie-banner a {
+    color: gray;
+}
+
+.actions button {
+    margin-left: 8px;
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.accept {
+    background: white;
+    color: black;
+}
+
+.reject {
+    background: #444;
+    color: white;
+}

@@ -1,8 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+
+import { getCookie } from "./utils/cookie-utils";
+import { loadGoogleAnalytics } from "./utils/analytics";
+
 import Loader from "./components/loader/loader";
 import BackToTop from "./components/backToTop/backToTop";
+import CookieBanner from "./components/cookie-consent/cookieBanner";
 
 const NavigationLayout = lazy(() =>
   import("./components/navigation/navigationLayout/navigationLayout")
@@ -26,26 +31,65 @@ const Terms = lazy(() => import("./pages/terms-policy/terms"));
 const App = () => {
   const location = useLocation();
 
+  useEffect(() => {
+    const consent = getCookie("user_consent");
+
+    if (consent === "accepted") {
+      loadGoogleAnalytics();
+    }
+
+    const handleConsentAccepted = () => {
+      loadGoogleAnalytics();
+    };
+
+    window.addEventListener(
+      "cookie-consent-accepted",
+      handleConsentAccepted
+    );
+
+    return () => {
+      window.removeEventListener(
+        "cookie-consent-accepted",
+        handleConsentAccepted
+      );
+    };
+  }, []);
+
   return (
     <>
+
+      <CookieBanner />
+
       <Suspense fallback={<Loader />}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<NavigationLayout />}>
               <Route index element={<Home />} />
+
               <Route path="artworks" element={<Artworks />} />
-              <Route path="artworks/:artworkSlug" element={<ArtworkInfo />} />
+              <Route
+                path="artworks/:artworkSlug"
+                element={<ArtworkInfo />}
+              />
+
               <Route path="designs" element={<Designs />} />
-              <Route path="designs/:subcategory" element={<Category />} />
-              <Route path="designs/:subcategory/:projectSlug" element={<ProjectInfo />} />
+              <Route
+                path="designs/:subcategory"
+                element={<Category />}
+              />
+              <Route
+                path="designs/:subcategory/:projectSlug"
+                element={<ProjectInfo />}
+              />
+
               <Route path="graydes" element={<Graydes />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
 
+              <Route path="terms" element={<Terms />} />
+
               <Route path="404" element={<NotFound />} />
               <Route path="*" element={<NotFound />} />
-
-              <Route path="terms" element={<Terms />} />
             </Route>
           </Routes>
         </AnimatePresence>

@@ -55,28 +55,20 @@ import av4 from "../assets/project-images/designs/athens-voice/AV4.jpg"
 import av5 from "../assets/project-images/designs/athens-voice/AV5.jpg"
 import av6 from "../assets/project-images/designs/athens-voice/AV6.jpg"
 
+import margCover from "../assets/project-images/designs/margroupo/MargroupoCover.jpg"
+import marg1 from "../assets/project-images/designs/margroupo/Margroupo1.jpg"
+import marg2 from "../assets/project-images/designs/margroupo/Margroupo2.jpg"
+import marg3 from "../assets/project-images/designs/margroupo/Margroupo3.jpg"
+import marg4 from "../assets/project-images/designs/margroupo/Margroupo4.jpg"
+import marg5 from "../assets/project-images/designs/margroupo/Margroupo5.jpg"
+import marg6 from "../assets/project-images/designs/margroupo/Margroupo6.jpg"
+import marg7 from "../assets/project-images/designs/margroupo/Margroupo7.jpg"
+import marg8 from "../assets/project-images/designs/margroupo/Margroupo8.jpg"
+import marg9 from "../assets/project-images/designs/margroupo/Margroupo9.jpg"
 
 export const PROJECTS = [
   {
     id: 1,
-    createdAt: Date.now(),
-    name: "Fosforize",
-    slug: "fosforize",
-    title: "Fosforize | Meze Bar",
-    client: "Fosforize",
-    location: "Athens",
-    scope: "360° Design",
-    description: [
-      "Fosforize was designed as a fully realized brand expressed through its space. From the initial idea to the final implementation, the goal was to create an authentic gathering spot with a clear identity and character.  ",
-      "The project began with the naming process, a key strategic element of the branding, and continued with the definition of the concept and overall style. Architectural design, interior decoration, as well as the logo and visual identity were developed to ensure cohesion and functionality across all touchpoints of the brand. The development of Fosforize also included advisory guidance on product selection, operational flow, and the overall guest experience. Implementation was carried out by a team of specialized professionals under my continuous supervision, ensuring that every detail reflects the same philosophy and aesthetic.The concept draws inspiration from simplicity and the urban character of the city, blending urban, street, and avant-garde elements. Music and art play a central role in the identity of the space, while Greek meze and craft beers complete the experience. Fosforize is a 360° design example, where idea, brand, and space function as a unified whole, with clear direction and a distinct identity. "
-    ],
-    images: [fosCover, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10],
-    creativeFields: ["Naming", "Logo Design ", "Brand Identity ", "Art Direction ", "Concept Development ", "Creative Direction & Project Oversight "],
-    category: ["design"],
-    subcategory: ["interior-design", "logo-design",],
-  },
-  {
-    id: 2,
     createdAt: Date.now(),
     name: "Veyrale",
     slug: "veyrale",
@@ -92,6 +84,24 @@ export const PROJECTS = [
     images: [veyraleCover, v1, v2, v3, v4, v5, v6, v7, v8, v9],
     category: ["design"],
     subcategory: ["logo-design", "packaging"],
+  },
+  {
+    id: 2,
+    createdAt: Date.now(),
+    name: "Fosforize",
+    slug: "fosforize",
+    title: "Fosforize | Meze Bar",
+    client: "Fosforize",
+    location: "Athens",
+    scope: "360° Design",
+    description: [
+      "Fosforize was designed as a fully realized brand expressed through its space. From the initial idea to the final implementation, the goal was to create an authentic gathering spot with a clear identity and character.  ",
+      "The project began with the naming process, a key strategic element of the branding, and continued with the definition of the concept and overall style. Architectural design, interior decoration, as well as the logo and visual identity were developed to ensure cohesion and functionality across all touchpoints of the brand. The development of Fosforize also included advisory guidance on product selection, operational flow, and the overall guest experience. Implementation was carried out by a team of specialized professionals under my continuous supervision, ensuring that every detail reflects the same philosophy and aesthetic.The concept draws inspiration from simplicity and the urban character of the city, blending urban, street, and avant-garde elements. Music and art play a central role in the identity of the space, while Greek meze and craft beers complete the experience. Fosforize is a 360° design example, where idea, brand, and space function as a unified whole, with clear direction and a distinct identity. "
+    ],
+    images: [fosCover, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10],
+    creativeFields: ["Naming", "Logo Design ", "Brand Identity ", "Art Direction ", "Concept Development ", "Creative Direction & Project Oversight "],
+    category: ["design"],
+    subcategory: ["interior-design", "logo-design",],
   },
   {
     id: 3,
@@ -135,7 +145,7 @@ export const PROJECTS = [
     location: "Piraeus",
     scope: "Logo Design, Brand Identity, Interior Design, Concept Development",
     description: ["In 2025, QMS Maritime Training Center, one of the leading maritime training institutions in Greece, underwent a complete transformation of its brand and physical presence. Founded in 1996 and based in Piraeus, QMS has trained more than 45,000 seafarers and shipping executives worldwide, delivering internationally accredited maritime training programs. The project focused on redefining the institution’s identity through a comprehensive rebranding process that began with the design of a new logo and corporate identity and extended to the complete architectural redesign of the training center. The aim was to create a contemporary, minimal and robust branding system capable of standing confidently within a highly competitive international environment and representing QMS across global maritime exhibitions. From brand identity and visual language to architectural planning, 3D design and full execution, the new image was translated into a cohesive brand experience that reflects precision, credibility and the forward-looking nature of modern maritime education."],
-    images: [qmsCover, qms1, qms2, qms3, qms4, qms5, qms5, qms6, qms7],
+    images: [qmsCover, qms1, qms2, qms3, qms4, qms5, qms6, qms7],
     category: ["design"],
     subcategory: ["logo-design", "three-sixty"],
   },
@@ -150,6 +160,20 @@ export const PROJECTS = [
     scope: " Logo Design, Brand Identity, Consulting",
     description: ["YEFSY is a Toronto-based company created to introduce premium Greek products to the Canadian market, with a clear vision for expansion across major cities nationwide. The brand was designed to reflect quality, structure, and trust, addressing a refined audience and selected points of sale that value authenticity and consistency. Following extensive research into market positioning and consumer needs, the visual identity was developed to communicate a contemporary and confident presence, balancing Greek heritage with a modern, international character. Inspired by forms drawn from the Greek alphabet and the natural flow of the Mediterranean landscape, the logo expresses purity, movement, and origin without relying on literal references. The result is a timeless and flexible identity system that supports wholesale distribution, branding, and future growth, positioning YEFSY as a premium and reliable ambassador of Greek excellence in Canada."],
     images: [yCover, y1, y2, y4, y5, y6, y7, y8],
+    category: ["design"],
+    subcategory: ["logo-design"],
+  },
+  {
+    id: 7,
+    createdAt: Date.now(),
+    name: "Margroupo",
+    slug: "margroupo",
+    title: "Margroupo",
+    client: "Margroupo",
+    location: "Piraeus",
+    scope: "Naming, Logo Design, Brand Identity",
+    description: ["Margroupo brings together a family of companies operating across travel, hospitality, and maritime services under a unified and contemporary identity. The visual language was designed to function as a premium umbrella brand, defined by clarity, structure, and a refined international character. Through restrained geometry, controlled proportions, and subtle references to movement and journey, the identity expresses elegance without excess and strength without ornamentation. The design approach emphasizes cohesion and timelessness, allowing the brand to adapt seamlessly across diverse applications while maintaining a consistent presence. The result is a sophisticated identity system that reflects premium quality, credibility, and a modern perspective, positioning Margroupo as a confident and forward-thinking group."],
+    images: [margCover, marg1, marg2, marg3, marg4, marg5, marg6, marg7, marg9, marg8],
     category: ["design"],
     subcategory: ["logo-design"],
   },

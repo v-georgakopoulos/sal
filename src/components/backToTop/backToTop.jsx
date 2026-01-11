@@ -30,7 +30,7 @@ const BackToTop = () => {
             onClick={handleScrollToTop}
             aria-label="Scroll to top"
         >
-            <ArrowUp size={24} />
+            <ArrowUp size={22} strokeWidth={1} />
         </button>
     )
 }

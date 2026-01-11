@@ -62,7 +62,7 @@ const ArtworkInfo = () => {
                         Artist <span>{artist}</span>
                     </p>
                     <p>
-                        Title of Artwork <span>{title}</span>
+                        Title<span>{title}</span>
                     </p>
                     <p>
                         Series <span>{series}</span>
@@ -77,7 +77,7 @@ const ArtworkInfo = () => {
                         Dimensions <span>{dimensions}</span>
                     </p>
                     <p>
-                        Country of Origin <span>{country}</span>
+                        Country<span>{country}</span>
                     </p>
                     <p>
                         Edition <span>{edition}</span>

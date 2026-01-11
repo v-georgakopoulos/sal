@@ -5,7 +5,7 @@
     .graydes-img {
         width: 100%;
 
-        img{
+        img {
             width: 100%;
             display: block;
         }
@@ -19,22 +19,28 @@
         justify-content: center;
 
 
-            .graydes-logo {
-                width: 300px;
-                padding-bottom: 20px;
-            }
-            p{  
-                font-weight: 400;
-                line-height: 1.6;
-            }
-    
-            .strong-par {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                margin: 20px 0;
-            }
+        .graydes-logo {
+            width: 300px;
+            padding-bottom: 20px;
         }
 
-    
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .strong-par {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: 20px 0;
+        }
+
+        i {
+            font-size: 15px;
+        }
+    }
+
+
 }

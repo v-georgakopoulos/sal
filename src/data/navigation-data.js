@@ -21,13 +21,18 @@ export const NAVIGATION_LINKS = [
       },
       {
         id: 32,
-        name: "Illustration",
-        path: "designs/illustration"
+        name: "Interior Design",
+        path: "designs/interior-design"
       },
       {
         id: 33,
-        name: "Interior Design",
-        path: "designs/interior-design"
+        name: "360° Design",
+        path: "designs/three-sixty"
+      },
+      {
+        id: 34,
+        name: "Illustration",
+        path: "designs/illustration"
       },
       {
         id: 34,

@@ -4,7 +4,7 @@ import "./latest-project.scss";
 
 const LatestProject = () => {
   const latestProject = [...PROJECTS].sort(
-    (a, b) => b.createdAt - a.createdAt
+    (a, b) => a.createdAt - b.createdAt
   )[0];
 
   const coverImage = latestProject.images[0];

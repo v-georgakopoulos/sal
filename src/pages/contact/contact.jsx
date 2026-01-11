@@ -74,7 +74,7 @@ const Contact = () => {
           <p>
             24 Megalou Vasileiou Str Nea Smyrni 17122 Athens Greece
           </p>
-          <p> +30 211 0041015 +30 6942536106</p>
+          <p className="telephone"> +30 211 0041015</p>
           <h1 className="map-directions">37.9438°N23.7155°E</h1>
         </div>
 

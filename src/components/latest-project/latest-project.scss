@@ -1,16 +1,19 @@
 .latest-project-container {
   width: 100%;
+
   .grid-latest {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     .latest-image {
       overflow: hidden;
+
       img {
         width: 100%;
         display: block;
         filter: grayscale(100%);
         transition: transform 1s ease;
+
         &:hover {
           transform: scale(1.05);
         }
@@ -29,9 +32,10 @@
       }
 
       h1 {
-        font-size: 70px;
+        font-size: 65px;
         font-weight: 100;
         transition: transform 1s ease;
+        margin-top: -1.1rem;
       }
     }
   }

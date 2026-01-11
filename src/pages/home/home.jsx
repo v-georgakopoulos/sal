@@ -5,7 +5,7 @@ import Footer from "../../components/footer/footer";
 import HeroSlider from "../../components/hero-slider/hero-slider";
 import subBanner from "../../assets/home-images/home-banner-two.jpg";
 import logoRewards from "../../assets/home-images/logos-rewards.svg"
-import logofolio from "../../assets/home-images/logofolio-footer.jpg";
+import logofolio from "../../assets/home-images/logofolio-footer-final.jpg";
 
 
 import "./home.scss";
@@ -31,7 +31,6 @@ const Home = () => {
                 <img
                   src={cat.logo}
                   alt={`${cat.name} logo`}
-                  loading="lazy"
                   className="logo-overlay"
                 />
               </div>
@@ -61,12 +60,16 @@ const Home = () => {
       </section>
 
       <section className="home-banner">
-        <img src={subBanner} alt="Sal Athens" />
+        <Link to={"/about"}>
+          <img src={subBanner} alt="Sal Athens" />
+        </Link>
       </section>
 
       <section>
         <div className="rewards-container">
-          <img src={logoRewards} alt="Rewards" />
+          <Link to={"designs/logo-design"}>
+            <img src={logoRewards} alt="Rewards" />
+          </Link>
         </div>
       </section>
 
