@@ -257,10 +257,18 @@
                     border-bottom: 1px solid black;
                     padding: 10px;
 
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+
+                    border-radius: 0;
+                    background: transparent;
+
                     &:focus {
                         border-bottom: 2px solid black;
                     }
                 }
+
 
                 textarea {
                     min-height: 100px;
