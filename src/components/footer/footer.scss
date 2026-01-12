@@ -49,6 +49,11 @@ footer {
             color: black;
             transition: color 0.5s ease;
 
+            @include laptop {
+                font-size: 0.8rem;
+                font-weight: 300;
+            }
+
             @include tablet {
                 font-size: 0.8rem;
                 font-weight: 300;

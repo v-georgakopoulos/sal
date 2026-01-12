@@ -58,6 +58,10 @@
       transition: transform 1s ease;
       margin-top: -1.1rem;
 
+      @include laptop {
+        font-size: 2.6rem;
+      }
+
       @include tablet {
         font-size: 2.2rem;
       }

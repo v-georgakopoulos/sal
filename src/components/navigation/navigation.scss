@@ -26,6 +26,10 @@
       width: 300px;
       max-width: 100%;
 
+      @include laptop {
+        width: 270px;
+      }
+
       @include tablet {
         width: 240px;
       }
@@ -43,6 +47,10 @@
     img {
       width: 40px;
       height: auto;
+
+      @include laptop {
+        width: 37px;
+      }
 
       @include tablet {
         width: 33px;
@@ -63,6 +71,11 @@
   justify-content: space-between;
   cursor: pointer;
   z-index: 1200;
+
+  @include laptop {
+    width: 28px;
+    height: 14px;
+  }
 
   @include tablet {
     width: 22px;

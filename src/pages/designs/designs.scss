@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
+
     @include tablet {
         grid-template-columns: 1fr;
     }
@@ -58,6 +59,12 @@
             top: 59%;
             left: 49%;
             transform: translate(-49%, -59%);
+
+            @include laptop {
+                top: 58%;
+                left: 50%;
+                transform: translate(-50%, -58%);
+            }
 
             @include tablet {
                 top: 50%;
@@ -131,6 +138,10 @@
         &:nth-child(1) .logo-container img {
             width: 130px;
 
+            @include laptop {
+                width: 75px;
+            }
+
             @include tablet {
                 width: 270px;
             }
@@ -138,6 +149,10 @@
 
         &:nth-child(2) .logo-container img {
             width: 125px;
+
+            @include laptop {
+                width: 80px;
+            }
 
             @include tablet {
                 width: 265px;
@@ -147,6 +162,10 @@
         &:nth-child(3) .logo-container img {
             width: 120px;
 
+            @include laptop {
+                width: 70px;
+            }
+
             @include tablet {
                 width: 245px;
             }
@@ -155,6 +174,10 @@
         &:nth-child(4) .logo-container img {
             width: 160px;
 
+            @include laptop {
+                width: 95px;
+            }
+
             @include tablet {
                 width: 320px;
             }
@@ -162,6 +185,11 @@
 
         &:nth-child(5) .logo-container img {
             width: 180px;
+
+            @include laptop {
+                width: 95px;
+            }
+
 
             @include tablet {
                 width: 340px;

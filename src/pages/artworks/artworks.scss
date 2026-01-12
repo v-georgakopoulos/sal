@@ -5,6 +5,11 @@
     margin: auto;
 
 
+    @include laptop {
+        width: calc(100% - 10px);
+
+    }
+
     @include tablet {
         width: calc(100% - 10px);
 
@@ -19,6 +24,10 @@
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
         gap: 10px;
+
+        @include laptop {
+            gap: 5px;
+        }
 
         @include tablet {
             gap: 5px;

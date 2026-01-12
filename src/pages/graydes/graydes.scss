@@ -4,6 +4,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    @include laptop {
+        position: relative;
+        margin-top: 50px;
+    }
+
     @include tablet {
         grid-template-columns: 1fr;
         margin-bottom: 60px;
@@ -36,6 +41,11 @@
             width: 300px;
             padding-bottom: 20px;
 
+            @include laptop {
+                width: 220px;
+                margin: auto;
+            }
+
             @include tablet {
                 padding-top: 20px;
                 width: 220px;
@@ -56,6 +66,10 @@
             font-weight: 400;
             line-height: 1.6;
 
+            @include laptop {
+                width: 90%;
+                margin: auto;
+            }
 
             @include mobile {
                 width: 100%;
@@ -72,6 +86,12 @@
             gap: 5px;
             margin: 20px 0;
 
+            @include laptop {
+                width: 90%;
+                margin: 20px auto;
+
+            }
+
             @include mobile {
                 width: 90%;
                 padding: 30px;
@@ -81,6 +101,16 @@
 
         i {
             font-size: 15px;
+
+            @include laptop {
+                position: absolute;
+                width: 100%;
+                bottom: -30px;
+                left: 78%;
+                transform: translate(-50%);
+
+
+            }
 
             @include mobile {
                 width: 90%;

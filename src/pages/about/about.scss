@@ -4,6 +4,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  @include laptop {
+    margin-top: 50px;
+  }
+
   @include tablet {
     grid-template-columns: 1fr;
   }
@@ -14,6 +18,10 @@
 
   .about-img {
     width: 100%;
+
+    @include laptop {
+      height: auto;
+    }
 
     @include tablet {
       order: 1;
@@ -35,6 +43,11 @@
     display: flex;
     width: 60%;
     margin: auto;
+
+    @include laptop {
+      width: 80%;
+
+    }
 
     @include tablet {
       order: 2;

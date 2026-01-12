@@ -36,6 +36,10 @@
             transition: transform 1s ease;
             pointer-events: none;
 
+            @include laptop {
+                height: 28px;
+            }
+
             @include tablet {
                 height: 28px;
             }
@@ -44,6 +48,12 @@
                 color: white;
                 font-size: 1rem;
                 font-weight: 400;
+
+                @include laptop {
+                    font-size: 0.8rem;
+                    font-weight: 300;
+                    letter-spacing: 0.5px;
+                }
 
                 @include tablet {
                     font-size: 0.8rem;
