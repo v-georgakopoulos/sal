@@ -45,7 +45,7 @@ export const ARTWORKS = [
         artist: "Sal",
         technique: "Black ink on paper",
         year: "2012",
-        dimensions: "40 x 30cm",
+        dimensions: "30 x 40cm",
         country: "Greece",
         edition: "Unique piece (1/1)",
         signed: "Yes",
