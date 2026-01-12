@@ -26,6 +26,10 @@
       width: 300px;
       max-width: 100%;
 
+      @include tablet {
+        width: 240px;
+      }
+
       @include mobile {
         width: 160px;
       }
@@ -39,6 +43,10 @@
     img {
       width: 40px;
       height: auto;
+
+      @include tablet {
+        width: 33px;
+      }
 
       @include mobile {
         width: 32px;
@@ -55,6 +63,11 @@
   justify-content: space-between;
   cursor: pointer;
   z-index: 1200;
+
+  @include tablet {
+    width: 22px;
+    height: 14px;
+  }
 
   @include mobile {
     width: 26px;
@@ -100,6 +113,10 @@
   transition: transform 0.8s ease;
   z-index: 1100;
   overflow-y: auto;
+
+  @include tablet {
+    width: 260px;
+  }
 
   @include mobile {
     top: 70px;

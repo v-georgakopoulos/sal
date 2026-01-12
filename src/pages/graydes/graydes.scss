@@ -4,9 +4,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    @include tablet {
+        grid-template-columns: 1fr;
+        margin-bottom: 60px;
+    }
+
     @include mobile {
         grid-template-columns: 1fr;
+        margin-bottom: 30px;
     }
+
 
     .graydes-img {
         width: 100%;
@@ -29,10 +36,19 @@
             width: 300px;
             padding-bottom: 20px;
 
+            @include tablet {
+                padding-top: 20px;
+                width: 220px;
+                margin: 28px auto;
+            }
+
             @include mobile {
+                padding-top: 20px;
                 width: 180px;
                 margin: 28px auto;
             }
+
+
         }
 
         p {

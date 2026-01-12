@@ -4,6 +4,10 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
 
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
     @include mobile {
         grid-template-columns: 1fr;
     }
@@ -12,9 +16,11 @@
 
 .artworks-large-image-container {
     width: 100%;
+    height: auto;
 
     img {
         width: 100%;
+        height: auto;
         display: block;
     }
 }
@@ -26,6 +32,10 @@
     justify-content: center;
     gap: 20px;
 
+    @include tablet {
+        margin-left: 30px;
+    }
+
     @include mobile {
         margin-left: unset;
     }
@@ -34,6 +44,11 @@
 .artworks-info-header {
     margin-bottom: 20px;
 
+
+    @include tablet {
+        order: 2;
+        margin-left: 32px;
+    }
 
     @include mobile {
         order: 2;
@@ -44,6 +59,12 @@
         font-size: 1.5rem;
         margin-bottom: 20px;
         font-weight: 600;
+
+        @include tablet {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
 
         @include mobile {
             font-size: 1.2rem;
@@ -56,6 +77,10 @@
         width: 75%;
         font-size: 1rem;
         line-height: 1.6;
+
+        @include tablet {
+            width: 91%;
+        }
 
         @include mobile {
             width: 91%;
@@ -70,6 +95,12 @@
     gap: 3px;
     margin-bottom: 20px;
 
+    @include tablet {
+        order: 3;
+        margin-top: -20px;
+        margin-left: 32px;
+    }
+
     @include mobile {
         order: 3;
         margin-top: -20px;
@@ -80,6 +111,12 @@
         font-size: 1.3rem;
         margin-bottom: 20px;
         font-weight: 500;
+
+        @include tablet {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
 
         @include mobile {
             font-size: 1.2rem;
@@ -104,10 +141,16 @@
     display: flex;
     gap: 10px;
 
+    @include tablet {
+        justify-content: center;
+        gap: 6px;
+    }
+
     @include mobile {
         justify-content: center;
         gap: 6px;
     }
+
 
 }
 
@@ -119,6 +162,14 @@
     opacity: 0.6;
     transition: all 0.6s ease;
     border: 2px solid transparent;
+
+    @include tablet {
+        width: 85px;
+        height: 85px;
+        order: 1;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
 
     @include mobile {
         width: 60px;
@@ -148,6 +199,14 @@
     cursor: pointer;
     margin-right: auto;
     margin-top: 5px;
+
+
+    @include tablet {
+        order: 4;
+        font-size: 1.5rem;
+        margin: -20px auto 30px auto;
+        font-weight: 200;
+    }
 
     @include mobile {
         order: 4;

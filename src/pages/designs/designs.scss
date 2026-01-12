@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
     @include mobile {
         grid-template-columns: 1fr;
     }
@@ -37,6 +41,12 @@
             left: 49%;
             transform: translate(-49%, -59%);
 
+            @include tablet {
+                top: 50%;
+                left: 51%;
+                transform: translate(-51%, -50%);
+            }
+
             @include mobile {
                 top: 36%;
                 left: 50%;
@@ -48,6 +58,12 @@
             top: 59%;
             left: 49%;
             transform: translate(-49%, -59%);
+
+            @include tablet {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
             @include mobile {
                 top: 33%;
@@ -61,6 +77,12 @@
             left: 51%;
             transform: translate(-51%, -58%);
 
+            @include tablet {
+                top: 50%;
+                left: 51%;
+                transform: translate(-51%, -50%);
+            }
+
             @include mobile {
                 top: 39%;
                 left: 50%;
@@ -72,6 +94,12 @@
             top: 58%;
             left: 50%;
             transform: translate(-50%, -58%);
+
+            @include tablet {
+                top: 48%;
+                left: 50%;
+                transform: translate(-50%, -48%);
+            }
 
             @include mobile {
                 top: 36%;
@@ -85,10 +113,16 @@
             left: 50%;
             transform: translate(-50%, -58%);
 
+            @include tablet {
+                top: 48%;
+                left: 50%;
+                transform: translate(-50%, -36%);
+            }
+
             @include mobile {
                 top: 36%;
                 left: 50%;
-                transform: translate(-50%, -36%);
+                transform: translate(-50%, -48%);
             }
 
         }
@@ -96,22 +130,42 @@
         // Specific logo widths
         &:nth-child(1) .logo-container img {
             width: 130px;
+
+            @include tablet {
+                width: 270px;
+            }
         }
 
         &:nth-child(2) .logo-container img {
             width: 125px;
+
+            @include tablet {
+                width: 265px;
+            }
         }
 
         &:nth-child(3) .logo-container img {
             width: 120px;
+
+            @include tablet {
+                width: 245px;
+            }
         }
 
         &:nth-child(4) .logo-container img {
             width: 160px;
+
+            @include tablet {
+                width: 320px;
+            }
         }
 
         &:nth-child(5) .logo-container img {
             width: 180px;
+
+            @include tablet {
+                width: 340px;
+            }
         }
 
         &:hover .logo-container img {
@@ -127,6 +181,10 @@
             line-height: 1.6;
             color: black;
 
+
+            @include tablet {
+                display: block;
+            }
 
             @include mobile {
                 display: block;
@@ -144,8 +202,12 @@
         justify-content: center;
         pointer-events: none;
 
+        @include tablet {
+            display: none;
+        }
+
         @include mobile {
-            display: none; // hide on mobile
+            display: none;
         }
     }
 
