@@ -40,12 +40,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include mobile {
+        height: 235px;
+        grid-area: latest-project;
+      }
     }
 
-    @include mobile {
-      height: 235px;
-      grid-area: latest-project;
-    }
 
     &:hover h1 {
       transform: scale(1.1);

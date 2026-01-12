@@ -66,9 +66,9 @@
             }
 
             @include mobile {
-                top: 33%;
+                top: 36%;
                 left: 50%;
-                transform: translate(-50%, -33%);
+                transform: translate(-50%, -36%);
             }
         }
 
@@ -102,9 +102,9 @@
             }
 
             @include mobile {
-                top: 36%;
+                top: 33%;
                 left: 50%;
-                transform: translate(-50%, -36%);
+                transform: translate(-50%, -33%);
             }
         }
 
@@ -120,9 +120,9 @@
             }
 
             @include mobile {
-                top: 36%;
+                top: 37%;
                 left: 50%;
-                transform: translate(-50%, -48%);
+                transform: translate(-50%, -37%);
             }
 
         }

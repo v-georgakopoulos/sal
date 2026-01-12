@@ -119,7 +119,9 @@
       margin-bottom: 7px;
 
       @include tablet {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
+        margin-bottom: 17px;
+        margin-top: 6px;
       }
 
       @include mobile {
@@ -138,8 +140,8 @@
 
 
       @include tablet {
-        padding: 0.5rem;
-        gap: 0.5rem;
+        padding: 0.4rem;
+        gap: 0.4rem;
       }
 
       @include mobile {
@@ -180,7 +182,7 @@
             transition: opacity 1s ease, transform 1s ease;
 
             @include tablet {
-              font-size: 2.2rem;
+              font-size: 1.1rem;
             }
           }
         }
@@ -235,6 +237,10 @@
       width: 130px;
       transition: transform 0.8s ease;
 
+      @include tablet {
+        width: 110px;
+      }
+
       @include mobile {
         width: 100px;
       }
@@ -256,6 +262,10 @@
       font-size: 1.8rem;
       font-weight: 200;
       margin-bottom: 20px;
+
+      @include tablet {
+        font-size: 1.4rem;
+      }
 
       @include mobile {
         font-size: 1.3rem;
