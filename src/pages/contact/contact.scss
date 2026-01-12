@@ -20,9 +20,21 @@
     .contact-image {
         width: 100%;
 
+        .contact-tablet-banner {
+            display: none;
+
+            @include laptop {
+                display: block;
+            }
+        }
+
         img {
             width: 100%;
             display: block;
+
+            @include laptop {
+                display: none;
+            }
         }
     }
 
@@ -50,8 +62,8 @@
                 font-weight: 100;
 
                 @include laptop {
-                    font-size: 2.2rem;
-                    margin: -6px auto;
+                    font-size: 1.6rem;
+                    margin: -5px auto;
                     letter-spacing: 1.8px;
                 }
 
@@ -73,6 +85,7 @@
                 @include laptop {
                     font-size: 1.2rem;
                     font-weight: 500;
+                    margin-top: 8px;
                 }
 
                 @include tablet {
@@ -93,6 +106,12 @@
                 width: 100%;
                 font-weight: 300;
 
+                @include laptop {
+                    margin-top: -7px;
+                }
+
+
+
                 @include tablet {
                     font-size: 1.15rem;
                     margin-top: 10px;
@@ -112,6 +131,11 @@
                         margin-top: 5px;
 
                     }
+
+                    @include laptop {
+                        display: block;
+                        margin-top: 5px;
+                    }
                 }
 
             }
@@ -121,6 +145,10 @@
                 font-size: 1rem;
                 font-weight: 500;
                 color: black;
+
+                @include laptop {
+                    margin-top: -3px;
+                }
 
                 @include tablet {
                     font-size: 1.2rem;
@@ -142,8 +170,8 @@
                 letter-spacing: 7px;
 
                 @include laptop {
-                    letter-spacing: 14.4px;
-                    font-size: 1.1rem;
+                    letter-spacing: 5px;
+                    font-size: 1.2rem;
                 }
 
                 @include tablet {
@@ -180,7 +208,7 @@
                 gap: 20px;
 
                 @include laptop {
-                    width: calc(100% - 40px);
+                    width: calc(100% - 80px);
                     margin: auto;
                 }
 

@@ -3,7 +3,6 @@ $tablet: 768px;
 $laptop: 992px;
 $desktop: 1200px;
 
-
 @mixin mobile {
     @media (max-width: $mobile) {
         @content;

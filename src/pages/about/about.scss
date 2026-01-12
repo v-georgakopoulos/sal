@@ -8,6 +8,7 @@
     margin-top: 50px;
   }
 
+
   @include tablet {
     grid-template-columns: 1fr;
   }
@@ -46,7 +47,6 @@
 
     @include laptop {
       width: 80%;
-
     }
 
     @include tablet {
@@ -68,6 +68,10 @@
       font-size: 1rem;
       font-weight: 400;
       line-height: 1.6;
+
+      @include laptop {
+        font-size: 0.8rem;
+      }
     }
   }
 }

@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import contactBanner from "../../assets/contact-images/contact-banner.jpg";
+import contactTablet from "../../assets/contact-images/contact-tablet.jpg"
 import "./contact.scss";
 
 const defaultFormFields = {
@@ -66,6 +67,7 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-image">
         <img src={contactBanner} alt="Brand Creator" />
+        <img className="contact-tablet-banner" src={contactTablet} alt="Brand Creator" />
       </div>
       <div className="contact-info">
         <div className="contact-details">
