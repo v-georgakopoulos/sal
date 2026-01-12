@@ -143,6 +143,8 @@
   .menu-item {
     position: relative;
 
+
+
     .menu-row {
       display: flex;
       justify-content: space-between;
@@ -169,6 +171,9 @@
         border: none;
         cursor: pointer;
         transition: transform 0.8s ease;
+        color: black;
+        stroke: currentColor;
+
 
         &.active {
           transform: rotate(180deg);
