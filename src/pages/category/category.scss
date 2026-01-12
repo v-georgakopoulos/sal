@@ -4,6 +4,11 @@
     width: calc(100% - 20px);
     margin: auto;
 
+    @include desktop {
+        width: calc(100% - 10px);
+
+    }
+
     @include laptop {
         width: calc(100% - 10px);
 
@@ -26,6 +31,10 @@
         place-items: center;
         gap: 10px;
 
+
+        @include desktop {
+            gap: 5px;
+        }
 
         @include laptop {
             gap: 5px;

@@ -18,6 +18,10 @@
     .about-tablet {
       display: none;
 
+      @include desktop {
+        display: block;
+      }
+
       @include laptop {
         display: block;
       }
@@ -36,6 +40,10 @@
       width: 100%;
       height: 100%;
       display: block;
+
+      @include desktop {
+        display: none;
+      }
 
       @include laptop {
         display: none;

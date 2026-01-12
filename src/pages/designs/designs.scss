@@ -137,6 +137,10 @@
         &:nth-child(1) .logo-container img {
             width: 130px;
 
+            @include desktop {
+                width: 85px;
+            }
+
             @include laptop {
                 width: 70px;
             }
@@ -148,6 +152,10 @@
 
         &:nth-child(2) .logo-container img {
             width: 125px;
+
+            @include desktop {
+                width: 85px;
+            }
 
             @include laptop {
                 width: 65px;
@@ -161,6 +169,10 @@
         &:nth-child(3) .logo-container img {
             width: 120px;
 
+            @include desktop {
+                width: 80px;
+            }
+
             @include laptop {
                 width: 60px;
             }
@@ -173,6 +185,10 @@
         &:nth-child(4) .logo-container img {
             width: 160px;
 
+            @include desktop {
+                width: 95px;
+            }
+
             @include laptop {
                 width: 85px;
             }
@@ -184,6 +200,10 @@
 
         &:nth-child(5) .logo-container img {
             width: 180px;
+
+            @include desktop {
+                width: 95px;
+            }
 
             @include laptop {
                 width: 85px;

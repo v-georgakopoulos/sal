@@ -26,6 +26,10 @@
         .graydes-tablet {
             display: none;
 
+            @include desktop {
+                display: block;
+            }
+
             @include laptop {
                 display: block;
             }
@@ -38,6 +42,10 @@
             @include laptop {
                 display: none;
             }
+
+            @include desktop {
+                display: none;
+            }
         }
     }
 
@@ -48,6 +56,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include desktop {
+            width: 75%;
+        }
 
         @include laptop {
             width: 94%;

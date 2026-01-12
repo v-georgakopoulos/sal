@@ -118,6 +118,12 @@
       font-weight: 100;
       margin-bottom: 7px;
 
+      @include desktop {
+        font-size: 2.6rem;
+        margin-bottom: 17px;
+        margin-top: 6px;
+      }
+
       @include laptop {
         font-size: 2.5rem;
         margin-bottom: 17px;
@@ -144,6 +150,11 @@
       gap: 1rem;
 
 
+
+      @include desktop {
+        padding: 0.4rem;
+        gap: 0.4rem;
+      }
 
       @include laptop {
         padding: 0.4rem;
