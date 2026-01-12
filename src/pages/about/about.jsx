@@ -1,4 +1,5 @@
 import aboutBanner from "../../assets/about-images/about-banner.jpg"
+import aboutTablet from "../../assets/about-images/About-tablet.jpg"
 import "./about.scss"
 const About = () => {
   return (
@@ -21,6 +22,7 @@ const About = () => {
       </div>
       <div className="about-img">
         <img src={aboutBanner} alt="Sal Athens" />
+        <img className="about-tablet" src={aboutTablet} alt="Sal Athens" />
       </div>
     </div>
   );

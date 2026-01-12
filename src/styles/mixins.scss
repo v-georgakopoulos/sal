@@ -22,7 +22,7 @@ $desktop: 1200px;
 }
 
 @mixin desktop {
-    @media (min-width: ($laptop + 1)) {
+    @media (min-width: ($laptop + 1)) and (max-width:$desktop) {
         @content;
     }
 }

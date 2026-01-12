@@ -6,7 +6,6 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
-
     @include tablet {
         grid-template-columns: 1fr;
     }
@@ -139,7 +138,7 @@
             width: 130px;
 
             @include laptop {
-                width: 75px;
+                width: 70px;
             }
 
             @include tablet {
@@ -151,7 +150,7 @@
             width: 125px;
 
             @include laptop {
-                width: 80px;
+                width: 65px;
             }
 
             @include tablet {
@@ -163,7 +162,7 @@
             width: 120px;
 
             @include laptop {
-                width: 70px;
+                width: 60px;
             }
 
             @include tablet {
@@ -175,7 +174,7 @@
             width: 160px;
 
             @include laptop {
-                width: 95px;
+                width: 85px;
             }
 
             @include tablet {
@@ -187,7 +186,7 @@
             width: 180px;
 
             @include laptop {
-                width: 95px;
+                width: 85px;
             }
 
 

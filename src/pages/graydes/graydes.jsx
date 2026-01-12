@@ -1,5 +1,6 @@
 import graydesBanner from "../../assets/graydes-images/graydes-banner.jpg";
 import graydesLogo from "../../assets/graydes-images/graydes-black-logo.svg";
+import graydesTablet from "../../assets/graydes-images/Graydes-tablet.jpg"
 import "./graydes.scss";
 
 const Graydes = () => {
@@ -7,6 +8,7 @@ const Graydes = () => {
     <div className="graydes-container">
       <div className="graydes-img">
         <img src={graydesBanner} alt="Graydes Banner" />
+        <img className="graydes-tablet" src={graydesTablet} alt="Graydes Banner" />
       </div>
       <div className="graydes-info">
         <img className="graydes-logo" src={graydesLogo} alt="Graydes" />
