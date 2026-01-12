@@ -276,12 +276,17 @@
                     padding: 10px;
                     font-family: "Roboto";
                     margin-top: 20px;
+                    border: 1px solid black;
                 }
 
                 .terms-container {
                     height: 20px;
                     display: flex;
                     align-items: center;
+
+                    .terms-input {
+                        border: 1px solid black;
+                    }
 
                     span {
                         font-size: 14px;

@@ -120,7 +120,7 @@ const Contact = () => {
                 name="terms"
                 checked={termsAccepted}
                 onChange={(e) => setTermsAccepted(e.target.checked)}
-                className="terms"
+                className="terms-input"
               />
               <span>
                 I accept the{" "}
