@@ -2,32 +2,48 @@ import { motion } from "framer-motion";
 import salLogo from "../../assets/home-images/favicon-Sal.png";
 import "./loader.scss";
 
-const loaderVariants = {
-    initial: {
-        scale: 0.9,
-        opacity: 0.6,
-    },
+const spinClockwise = {
     animate: {
-        scale: [0.9, 1.05, 0.9],
-        opacity: [0.6, 1, 0.6],
+        rotate: 360,
         transition: {
-            duration: 0.8,
-            ease: "easeInOut",
             repeat: Infinity,
+            duration: 1.2,
+            ease: "linear",
+        },
+    },
+};
+
+const spinCounterClockwise = {
+    animate: {
+        rotate: -360,
+        transition: {
+            repeat: Infinity,
+            duration: 1.8,
+            ease: "linear",
         },
     },
 };
 
 const Loader = () => {
     return (
-        <motion.div
-            className="loader-container"
-            variants={loaderVariants}
-            initial="initial"
-            animate="animate"
-        >
-            <img src={salLogo} alt="sal" />
-        </motion.div>
+        <div className="loader-container">
+            {/* Outer ring */}
+            <motion.div
+                className="ring ring--outer"
+                variants={spinCounterClockwise}
+                animate="animate"
+            />
+
+            {/* Inner ring */}
+            <motion.div
+                className="ring ring--inner"
+                variants={spinClockwise}
+                animate="animate"
+            />
+
+            {/* Logo */}
+            <img src={salLogo} alt="Sal logo" className="loader-logo" />
+        </div>
     );
 };
 
