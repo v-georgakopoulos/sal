@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, useScroll } from "framer-motion";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { lazy, Suspense, useEffect } from "react";
 
 import { getCookie } from "./utils/cookie-utils";
 import { loadGoogleAnalytics } from "./utils/analytics";
