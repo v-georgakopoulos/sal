@@ -49,7 +49,7 @@ const Navigation = () => {
       {/* Sidebar menu */}
       <ul
         className={`menu ${menuOpen ? "open" : ""}`}
-      // onMouseLeave={closeMenu}
+        onMouseLeave={closeMenu}
       >
         {NAVIGATION_LINKS.map((link) => {
           const hasSubmenu = Boolean(link.subcategories);
