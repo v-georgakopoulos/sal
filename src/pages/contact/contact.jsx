@@ -77,7 +77,7 @@ const Contact = () => {
             <span>24 Megalou Vasileiou Str</span>
             <span>Nea Smyrni 17122 Athens Greece</span>
           </p>
-          <a className="telephone" href="tel:+30 211 00441015"> +30 211 0041015</a>
+          <a className="telephone" href="tel:+30 211 0041015"> +30 211 0041015</a>
           <h1 className="map-directions">37.9438°N23.7155°E</h1>
         </div>
 

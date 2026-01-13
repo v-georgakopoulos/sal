@@ -27,21 +27,17 @@ const spinCounterClockwise = {
 const Loader = () => {
     return (
         <div className="loader-container">
-            {/* Outer ring */}
+
             <motion.div
                 className="ring ring--outer"
                 variants={spinCounterClockwise}
                 animate="animate"
             />
-
-            {/* Inner ring */}
             <motion.div
                 className="ring ring--inner"
                 variants={spinClockwise}
                 animate="animate"
             />
-
-            {/* Logo */}
             <img src={salLogo} alt="Sal logo" className="loader-logo" />
         </div>
     );
