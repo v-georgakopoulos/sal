@@ -4,25 +4,27 @@ import "./latest-project.scss";
 
 const LatestProject = () => {
   const latestProject = [...PROJECTS].sort(
-    (a, b) => a.createdAt - b.createdAt
+    (a, b) => b.createdAt - a.createdAt
   )[0];
 
+  if (!latestProject) return null;
+
   const coverImage = latestProject.images[0];
+  const subcategory = latestProject.subcategory[0];
 
   return (
     <div className="latest-project-container">
-      {latestProject && (
-        <div className="grid-latest">
-          <Link to={`/${latestProject.slug}`}>
-            <div className="latest-image">
-              <img src={coverImage} alt={latestProject.title} />
-            </div>
-          </Link>
-          <div className="latest-project">
-            <h1>New Arrival</h1>
+      <div className="grid-latest">
+        <Link to={`/designs/${subcategory}/${latestProject.slug}`}>
+          <div className="latest-image">
+            <img src={coverImage} alt={latestProject.title} />
           </div>
+        </Link>
+
+        <div className="latest-project">
+          <h1>New Arrival</h1>
         </div>
-      )}
+      </div>
     </div>
   );
 };

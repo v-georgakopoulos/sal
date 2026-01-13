@@ -26,6 +26,8 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (!termsAccepted) return;
+
     setLoading(true);
     setSuccess(false);
     setError(false);
@@ -90,6 +92,7 @@ const Contact = () => {
               value={fullname}
               onChange={onChangeHandler}
               required
+              className="form-input"
             />
             <input
               type="email"
@@ -98,6 +101,7 @@ const Contact = () => {
               value={email}
               onChange={onChangeHandler}
               required
+              className="form-input"
             />
             <input
               type="tel"
@@ -105,6 +109,7 @@ const Contact = () => {
               name="phone"
               value={phone}
               onChange={onChangeHandler}
+              className="form-input"
             />
             <textarea
               placeholder="Message*"
@@ -120,6 +125,7 @@ const Contact = () => {
                 name="terms"
                 checked={termsAccepted}
                 onChange={(e) => setTermsAccepted(e.target.checked)}
+                required
                 className="terms-input"
               />
               <span>
@@ -131,15 +137,15 @@ const Contact = () => {
               </span>
             </div>
 
-            <button type="submit" disabled={loading} className="form-button">
+            <button type="submit" disabled={loading || !termsAccepted} className="form-button">
               {loading ? "Sending..." : "Send"}
             </button>
 
             {success && (
-              <p className="success-message">Message sent successfully!</p>
+              <p className="success-message" aria-live="polite">Message sent successfully!</p>
             )}
             {error && (
-              <p className="error-message">
+              <p className="error-message" aria-live="assertive">
                 Failed to send message. Please try again!
               </p>
             )}
